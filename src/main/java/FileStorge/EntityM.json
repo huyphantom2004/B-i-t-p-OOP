@@ -1,0 +1,882 @@
+[
+ {
+  "Fullname": "Bitcoin",
+  "symbol": "btc",
+  "description": "Bitcoin is a decentralized digital currency that operates on a peer-to-peer network, utilizing blockchain technology to enable secure and transparent transactions without the need for intermediaries like banks or governments. Created by an anonymous entity or group known as Satoshi Nakamoto in 2008, Bitcoin has gained widespread adoption as a store of value and medium of exchange. Users can send and receive bitcoins through cryptographic keys, with transactions recorded on a public ledger called the blockchain.",
+  "name": "bitcoin",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Bitcoin.jpg"
+ },
+ {
+  "Fullname": "Ethereum",
+  "symbol": "eth",
+  "description": "Ethereum is an open-source, blockchain-based platform that enables developers to build and deploy decentralized applications (dApps) and smart contracts. Founded by Vitalik Buterin in 2015, Ethereum introduced the concept of a programmable blockchain, allowing developers to create customized applications with self-executing code. Ethereum's native cryptocurrency, Ether (ETH), is used to pay for transaction fees and computational services on the network.",
+  "name": "ethereum",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Ethereum.jpg"
+ },
+ {
+  "Fullname": "Binance Coin",
+  "symbol": "bnb",
+  "description": "Binance Coin (BNB) is a cryptocurrency created by the Binance exchange, one of the largest cryptocurrency exchanges in the world. Initially launched as an ERC-20 token on the Ethereum blockchain, BNB has since migrated to Binance's native blockchain, Binance Chain. BNB is primarily used to pay for trading fees on the Binance platform, as well as for participating in token sales on Binance Launchpad and other Binance ecosystem services.",
+  "name": "binancecoin",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Binance Coin.jpg"
+ },
+ {
+  "Fullname": "Bitcoin Protocol",
+  "symbol": "btc protocol",
+  "description": "The Bitcoin protocol refers to the underlying set of rules and conventions that govern the Bitcoin network. These rules define how transactions are validated, added to the blockchain, and maintained by network participants, including miners and full nodes. The Bitcoin protocol relies on cryptographic principles, such as proof-of-work consensus and digital signatures, to ensure the security and integrity of the network.",
+  "name": "bitcoinprotocol",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Bitcoin Protocol.png"
+ },
+ {
+  "Fullname": "Ethereum Virtual Machine",
+  "symbol": "evm",
+  "description": "The Ethereum Virtual Machine (EVM) is a decentralized runtime environment that executes smart contracts on the Ethereum blockchain. It serves as a sandboxed environment for running code written in Ethereum's smart contract programming languages, such as Solidity. The EVM is responsible for processing transactions, executing contract code, and managing state changes within the Ethereum network, providing a platform for decentralized applications (dApps) to operate.",
+  "name": "ethereumvirtualmachine",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Ethereum Virtual Machine.jpg"
+ },
+ {
+  "Fullname": "Satoshi Nakamoto",
+  "symbol": "nakamoto",
+  "description": "Satoshi Nakamoto is the pseudonymous individual or group credited with the creation of Bitcoin. In 2008, Nakamoto published a white paper titled \"Bitcoin: A Peer-to-Peer Electronic Cash System,\" outlining the design and principles of the cryptocurrency. Despite widespread speculation, the true identity of Satoshi Nakamoto remains unknown, and they disappeared from public view in 2011, leaving the development of Bitcoin to the broader community.",
+  "name": "satoshinakamoto",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Satoshi Nakamoto.jpg"
+ },
+ {
+  "Fullname": "Chainlink",
+  "symbol": "LINK",
+  "description": "Chainlink is a decentralized oracle network that connects smart contracts with real-world data, enabling them to interact with external systems and APIs. Founded by Sergey Nazarov and Steve Ellis in 2017, Chainlink addresses the \"oracle problem\" by providing a secure and reliable way to access off-chain data and execute external computations within smart contracts. Chainlink's native cryptocurrency, LINK, is used to incentivize node operators and secure the network.",
+  "name": "chainlink",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Chainlink.jpg"
+ },
+ {
+  "Fullname": "Uniswap",
+  "symbol": "UNI",
+  "description": "Uniswap is a decentralized exchange (DEX) protocol built on the Ethereum blockchain, allowing users to swap ERC-20 tokens without the need for intermediaries or order books. Launched in 2018 by Hayden Adams, Uniswap utilizes an automated market maker (AMM) model, where trades are executed against liquidity pools rather than other users. Uniswap's unique design and user-friendly interface have contributed to its popularity within the DeFi (decentralized finance) ecosystem.",
+  "name": "uniswap",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Uniswap.png"
+ },
+ {
+  "Fullname": "Visa",
+  "symbol": "Không có Symbol",
+  "description": "Visa is a global payments technology company that facilitates electronic funds transfers and transactions between consumers, businesses, and financial institutions. Founded in 1958 as BankAmericard, Visa operates one of the world's largest payment networks, connecting millions of merchants and cardholders worldwide. Visa offers a range of payment products and services, including credit cards, debit cards, prepaid cards, and mobile payments, to enable secure and convenient transactions.",
+  "name": "visa",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Visa.png"
+ },
+ {
+  "Fullname": "Paypal",
+  "symbol": "pypl",
+  "description": "PayPal is an online payments system that allows individuals and businesses to send and receive money electronically, as well as process online payments for goods and services. Founded in 1998 by Elon Musk, Peter Thiel, and Max Levchin, PayPal initially focused on providing payment solutions for e-commerce merchants. It has since expanded to offer peer-to-peer transfers, mobile payments, and other financial services, becoming one of the world's largest online payment platforms.",
+  "name": "paypal",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Paypal.png"
+ },
+ {
+  "Fullname": "Federal Bureau of Investigation",
+  "symbol": "fbi",
+  "description": "The Federal Bureau of Investigation (FBI) is the domestic intelligence and security service of the United States, responsible for investigating and enforcing federal laws within the country. Established in 1908, the FBI conducts investigations into various criminal activities, including terrorism, cybercrime, organized crime, corruption, and civil rights violations. It also provides intelligence and investigative support to other law enforcement agencies at the federal, state, and local levels.",
+  "name": "federalbureauofinvestigation",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Federal Bureau of Investigation.png"
+ },
+ {
+  "Fullname": "Silk Road",
+  "symbol": "sro",
+  "description": "Silk Road was an online black market platform that operated on the dark web from 2011 to 2013, facilitating the sale of illegal drugs, counterfeit goods, and other illicit items using Bitcoin as the primary form of payment. Founded by Ross Ulbricht, who operated under the pseudonym \"Dread Pirate Roberts,\" Silk Road gained notoriety for its anonymity features and cryptocurrency-based transactions. It was shut down by law enforcement in 2013, and Ulbricht was subsequently arrested and convicted for his role in running the site.",
+  "name": "silkroad",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Silk Road.jpg"
+ },
+ {
+  "Fullname": "Non-fungible token",
+  "symbol": "nft",
+  "description": "A non-fungible token (NFT) is a type of digital asset that represents ownership or proof of authenticity of a unique item or piece of content, stored on a blockchain. Unlike cryptocurrencies such as Bitcoin or Ether, which are fungible and interchangeable, NFTs are indivisible and distinguishable, making them ideal for representing digital collectibles, artwork, virtual real estate, and other unique assets. NFTs are typically bought, sold, and traded on specialized online marketplaces and platforms.",
+  "name": "nonfungibletoken",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Non-fungible token.jpg"
+ },
+ {
+  "Fullname": "Proof of Work",
+  "symbol": "PoW",
+  "description": "Proof of Work (PoW) is a consensus mechanism used in blockchain networks to achieve agreement on the validity of transactions and the ordering of blocks in the blockchain. In a PoW system, network participants, known as miners, compete to solve complex mathematical puzzles in order to validate and add new blocks to the blockchain. The difficulty of these puzzles is adjusted dynamically to ensure a consistent rate of block production and maintain network security.",
+  "name": "proofofwork",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Proof of Work.png"
+ },
+ {
+  "Fullname": "Proof of Stake",
+  "symbol": "PoS",
+  "description": "Proof of Stake (PoS) is a consensus mechanism used in blockchain networks, where validators are chosen to create and validate new blocks based on the amount of cryptocurrency they hold and are willing to \"stake\" as collateral. Unlike PoW systems, which rely on computational work to secure the network, PoS systems use economic incentives to encourage validators to act honestly and participate in block production. PoS is considered more energy-efficient than PoW and has been adopted by several blockchain platforms, including Ethereum 2.0.",
+  "name": "proofofstake",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Proof of Stake.jpg"
+ },
+ {
+  "Fullname": "Beacon chain",
+  "symbol": "Không có Symbol",
+  "description": "The Beacon Chain is a core component of Ethereum 2.0, the next major upgrade to the Ethereum blockchain. Introduced in December 2020 as part of the Ethereum 2.0 Phase 0 launch, the Beacon Chain serves as the backbone of Ethereum's new proof-of-stake (PoS) consensus mechanism, coordinating validator nodes and managing the Casper consensus protocol. The Beacon Chain operates independently of the Ethereum mainnet, providing security and finality for shard chains and the overall Ethereum 2.0 network.",
+  "name": "beaconchain",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Beacon chain.jpg"
+ },
+ {
+  "Fullname": "Transactions Per Second",
+  "description": "Transactions Per Second (TPS) is a measurement of the number of transactions processed by a blockchain network in one second. TPS is an important metric for evaluating the scalability and performance of blockchain platforms, as higher TPS values indicate faster transaction processing and greater network capacity. Achieving high TPS is a key challenge for blockchain developers, as it requires optimizing network infrastructure, consensus algorithms, and transaction processing mechanisms to handle increasing transaction volumes efficiently.",
+  "name": "transactionspersecond",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Transactions Per Second.jpg"
+ },
+ {
+  "Fullname": "Smart contracts",
+  "symbol": "Không có Symbol",
+  "description": "Smart contracts are self-executing contracts with the terms of the agreement directly written into code, automatically executing and enforcing when predefined conditions are met. Introduced by Nick Szabo in the 1990s, smart contracts are deployed on blockchain platforms like Ethereum, where they are stored and executed on a decentralized network of computers. Smart contracts can be used to automate a wide range of processes and transactions, including financial agreements, supply chain management, and decentralized applications (dApps), without the need for intermediaries or centralized control.",
+  "name": "smartcontracts",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Smart contracts.jpg"
+ },
+ {
+  "Fullname": "Public Blockchain",
+  "symbol": "Không có Symbol",
+  "description": "A public blockchain is a decentralized network where anyone can participate, read, or write transactions to the blockchain without permission. Public blockchains are characterized by their open and transparent nature, allowing for censorship-resistant transactions and data immutability. Bitcoin and Ethereum are examples of public blockchains, where network participants contribute to the validation and maintenance of the blockchain through consensus mechanisms like proof of work (PoW) or proof of stake (PoS).",
+  "name": "publicblockchain",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Public Blockchain.png"
+ },
+ {
+  "Fullname": "Private Blockchain",
+  "symbol": "Không có Symbol",
+  "description": "A private blockchain is a blockchain network where access is restricted to authorized participants only, typically controlled by a single organization or consortium of organizations. Unlike public blockchains, which are open and permissionless, private blockchains are permissioned and centralized, allowing for greater control over network governance, privacy, and scalability. Private blockchains are commonly used in enterprise settings for applications such as supply chain management, asset tracking, and data sharing among trusted parties.",
+  "name": "privateblockchain",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Private Blockchain.png"
+ },
+ {
+  "Fullname": "Consortium Blockchain",
+  "symbol": "Không có Symbol",
+  "description": "A consortium blockchain is a semi-decentralized network where multiple organizations control the consensus process and validate transactions, typically used for specific industry or enterprise applications. Consortium blockchains combine the benefits of both public and private blockchains, offering shared control over network governance and data integrity among trusted participants. Consortium blockchains are often deployed in sectors such as finance, healthcare, and logistics, where multiple stakeholders collaborate on common goals and processes.",
+  "name": "consortiumblockchain",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Consortium Blockchain.png"
+ },
+ {
+  "Fullname": "Metacoin",
+  "symbol": "Không có Symbol",
+  "description": "Metacoin refers to cryptocurrencies or tokens built on existing blockchain platforms, such as Ethereum, that enable additional functionality beyond simple currency transfer. Metacoins are typically issued as tokens on top of existing blockchain protocols, using smart contracts to define custom rules and features for the token. Examples of metacoins include utility tokens, security tokens, and governance tokens, which may represent access rights, ownership stakes, or voting power within decentralized applications (dApps) and ecosystems.",
+  "name": "metacoin",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Metacoin.jpg"
+ },
+ {
+  "Fullname": "IBM Blockchain",
+  "symbol": "Không có Symbol",
+  "description": "IBM Blockchain is a blockchain platform developed by IBM, offering enterprise-grade solutions for building and deploying blockchain applications across various industries. Leveraging open-source technologies and industry standards, IBM Blockchain provides tools and services for creating permissioned blockchain networks, developing smart contracts, and integrating blockchain with existing enterprise systems. IBM Blockchain is used by organizations worldwide for applications such as supply chain management, trade finance, and digital identity verification.",
+  "name": "ibmblockchain",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/IBM Blockchain.jpg"
+ },
+ {
+  "Fullname": "IBM Food Trust",
+  "symbol": "Không có Symbol",
+  "description": "IBM Food Trust is a blockchain-based food tracking and traceability platform developed by IBM, designed to enhance transparency and traceability in the food supply chain. Built on the IBM Blockchain platform, IBM Food Trust enables food producers, suppliers, retailers, and consumers to access real-time information about the provenance, processing, and distribution of food products. By digitizing and securely sharing supply chain data on a blockchain, IBM Food Trust aims to improve food safety, reduce waste, and build consumer trust in the food industry.",
+  "name": "ibmfoodtrust",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/IBM Food Trust.png"
+ },
+ {
+  "Fullname": "Stuart Haber and W. Scott Stornetta",
+  "description": "Stuart Haber and W. Scott Stornetta are researchers who made significant contributions to the development of cryptographic techniques and concepts, including the creation of the first blockchain prototype. In 1991, Haber and Stornetta published a seminal paper titled \"How to Time-Stamp a Digital Document,\" introducing the concept of a cryptographically secured chain of blocks for timestamping and authenticating digital documents. Their work laid the foundation for the subsequent development of blockchain technology and its applications in fields such as cryptocurrency, decentralized finance (DeFi), and digital identity.",
+  "name": "stuarthaberandwscottstornetta",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Stuart Haber and W. Scott Stornetta.jpg"
+ },
+ {
+  "Fullname": "Hashcash",
+  "symbol": "Không có Symbol",
+  "description": "Hashcash is a proof-of-work system used to limit email spam and denial-of-service (DoS) attacks by requiring senders to perform a computationally intensive task before sending an email or message. Introduced by Adam Back in 1997, Hashcash uses cryptographic hash functions to generate proof-of-work tokens, which must satisfy certain criteria (such as a specified number of leading zeros) to be considered valid. By requiring senders to expend computational resources to create valid tokens, Hashcash aims to deter spam and mitigate the impact of DoS attacks on internet services and communication networks.",
+  "name": "hashcash",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Hashcash.jpg"
+ },
+ {
+  "Fullname": "Dave Bayer",
+  "symbol": "Không có Symbol",
+  "description": "Dave Bayer is a mathematician known for his contributions to various fields of mathematics, including cryptography, computational geometry, and computer algebra. Bayer has made significant contributions to the development of cryptographic algorithms and protocols, particularly in the areas of number theory, elliptic curves, and cryptographic hash functions. His work has had a profound impact on the field of cryptography and its applications in cybersecurity, digital signatures, and blockchain technology.",
+  "name": "davebayer",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Dave Bayer.jpg"
+ },
+ {
+  "Fullname": "Peer-to-peer",
+  "symbol": "p2p",
+  "description": "Peer-to-peer (P2P) refers to a decentralized network architecture where participants interact directly with each other, without the need for intermediaries or central servers. In a P2P network, each participant, or peer, acts as both a client and a server, sharing resources, information, and services with other peers in the network. P2P networks are characterized by their distributed nature, resilience to single points of failure, and ability to facilitate direct communication and collaboration among peers, without reliance on centralized authorities or infrastructure.",
+  "name": "peertopeer",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Peer-to-peer.png"
+ },
+ {
+  "Fullname": "Merkle Tree",
+  "symbol": "Không có Symbol",
+  "description": "A Merkle tree, also known as a hash tree, is a data structure used in blockchain technology to efficiently store and verify the integrity of large sets of data. Fullnamed after computer scientist Ralph Merkle, who first proposed the concept in 1979, a Merkle tree organizes data into a hierarchical tree structure, where each leaf node represents a single data element and each non-leaf node represents the cryptographic hash of its child nodes. By aggregating hash values upwards from leaf nodes to the root, Merkle trees enable efficient verification of data integrity and consistency, providing a tamper-evident mechanism for detecting unauthorized changes or modifications to the data.",
+  "name": "merkletree",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Merkle Tree.png"
+ },
+ {
+  "Fullname": "Consensus Mechanisms",
+  "symbol": "Không có Symbol",
+  "description": "Consensus mechanisms are protocols or algorithms used in blockchain networks to achieve agreement on the validity of transactions and the ordering of blocks in the blockchain. Consensus mechanisms play a crucial role in maintaining the integrity and security of blockchain networks, ensuring that all participating nodes reach consensus on the state of the ledger and prevent double-spending and other malicious activities. Examples of consensus mechanisms include proof of work (PoW), proof of stake (PoS), delegated proof of stake (DPoS), practical Byzantine fault tolerance (PBFT), and distributed proof of authority (dPoA), each with its own set of advantages and trade-offs in terms of security, scalability, and decentralization.",
+  "name": "consensusmechanisms",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Consensus Mechanisms.jpg"
+ },
+ {
+  "Fullname": "Decentralized marketplace for digital content",
+  "symbol": "Không có Symbol",
+  "description": "A decentralized marketplace for digital content is a platform that enables creators to directly sell or exchange digital content, such as music, art, videos, or software, with consumers, without intermediaries or centralized control. Built on blockchain technology and smart contracts, decentralized marketplaces facilitate peer-to-peer transactions and enable creators to retain ownership and control over their content, while providing transparent and censorship-resistant access to consumers. Decentralized marketplaces are often associated with the decentralized web (Web 3.0) and the concept of digital sovereignty, empowering creators and consumers to transact freely and securely in the digital economy.",
+  "name": "decentralizedmarketplacefordigitalcontent",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Decentralized marketplace for digital content.png"
+ },
+ {
+  "Fullname": "Initial Coin Offerings",
+  "symbol": "ICOs",
+  "description": "Initial Coin Offerings (ICOs) are a fundraising method used by cryptocurrency projects and startups to raise capital by selling digital tokens or coins to investors in exchange for funding. Similar to initial public offerings (IPOs) in traditional finance, ICOs allow companies to raise funds for development and operation by issuing and selling tokens on blockchain platforms. ICOs gained popularity during the cryptocurrency boom of 2017, but have since faced regulatory scrutiny and declined in prevalence due to concerns about investor protection, fraud, and regulatory compliance.",
+  "name": "initialcoinofferings",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Initial Coin Offerings.jpg"
+ },
+ {
+  "Fullname": "The Onion Router",
+  "symbol": "tor",
+  "description": "The Onion Router (Tor) is free and open-source software for enabling anonymous communication by directing Internet traffic through a worldwide volunteer overlay network. Developed by the U.S. Navy in the 1990s and later released to the public, Tor uses a technique called onion routing to encrypt and route data through multiple intermediate nodes, or relays, before reaching its destination. By bouncing traffic through a series of randomly selected relays, Tor aims to conceal the user's IP address and browsing activity, providing privacy and anonymity online. Tor is commonly used to access the dark web, evade censorship, and protect against surveillance, although it has also been associated with illicit activities and criminal enterprises.",
+  "name": "theonionrouter",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/The Onion Router.png"
+ },
+ {
+  "Fullname": "Crypto Kitties",
+  "symbol": "Không có Symbol",
+  "description": "Crypto Kitties is a blockchain-based game that allows players to collect, breed, and trade virtual cats using Ethereum-based non-fungible tokens (NFTs). Developed by Canadian studio Axiom Zen in 2017, Crypto Kitties became one of the first mainstream applications of blockchain technology for gaming and digital collectibles. Each Crypto Kitty is represented by a unique token on the Ethereum blockchain, with traits and attributes determined by its genetic code. Players can buy, sell, breed, and trade Crypto Kitties on the Crypto Kitties marketplace, creating a vibrant ecosystem of digital pets and collectibles.",
+  "name": "cryptokitties",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Crypto Kitties.jpg"
+ },
+ {
+  "Fullname": "David Chaum",
+  "symbol": "Không có Symbol",
+  "description": "David Chaum is a cryptographer and computer scientist known for his pioneering work in digital privacy and cryptography. He is widely regarded as the inventor of digital cash and is credited with developing the first cryptographic anonymous electronic cash system, known as eCash, in the 1980s. Chaum's research laid the foundation for modern privacy-enhancing technologies and cryptographic protocols, including blind signatures, secure multiparty computation, and cryptographic voting systems.",
+  "name": "davidchaum",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/David Chaum.jpg"
+ },
+ {
+  "Fullname": "Decentralized Autonomous Organization",
+  "symbol": "Không có Symbol",
+  "description": "A Decentralized Autonomous Organization (DAO) is an organization represented by rules encoded as a computer program that is transparent, controlled by organization members, and not influenced by a central government. DAOs operate on blockchain networks, enabling decentralized decision-making, governance, and resource allocation without the need for traditional hierarchical management structures. DAOs are governed by smart contracts and token holders, who collectively determine the organization's policies, operations, and investments.",
+  "name": "decentralizedautonomousorganization",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Decentralized Autonomous Organization.png"
+ },
+ {
+  "Fullname": "Computerworld",
+  "symbol": "Không có Symbol",
+  "description": "Computerworld is a publication covering technology news, trends, and analysis targeted at IT professionals and technology enthusiasts. Founded in 1967, Computerworld provides in-depth coverage of topics such as hardware, software, cybersecurity, cloud computing, artificial intelligence, and emerging technologies. It publishes news articles, features, reviews, and opinion pieces both in print and online, serving as a trusted source of information for the tech industry.",
+  "name": "computerworld",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Computerworld.png"
+ },
+ {
+  "Fullname": "Adam Back",
+  "symbol": "Không có Symbol",
+  "description": "Adam Back is a computer scientist and cryptographer known for his contributions to the development of cryptographic technologies and digital currencies. He is the inventor of Hashcash, a proof-of-work system used to deter email spam and denial-of-service (DoS) attacks, which inspired the proof-of-work mechanism underlying Bitcoin. Back is also the CEO of Blockstream, a blockchain technology company focused on developing solutions for Bitcoin and other digital assets.",
+  "name": "adamback",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Adam Back.jpg"
+ },
+ {
+  "Fullname": "Nikolai Hampton",
+  "symbol": "Không có Symbol",
+  "description": "Nikolai Hampton is a technology journalist and writer known for his coverage of blockchain, cryptocurrency, and emerging technologies. He has written for various publications, including Computerworld, CIO, and TechRepublic, providing analysis and insights into the impact of technology on business, society, and culture. Hampton's work often explores topics such as blockchain adoption, decentralized finance (DeFi), digital identity, and cybersecurity.",
+  "name": "nikolaihampton",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Nikolai Hampton.jpg"
+ },
+ {
+  "Fullname": "Litecoin",
+  "symbol": "ltc",
+  "description": "Litecoin is a peer-to-peer cryptocurrency created by Charlie Lee in 2011 as a \"lite\" version of Bitcoin. Based on the Bitcoin protocol, Litecoin features faster transaction confirmation times and a different hashing algorithm (scrypt) designed to make mining more accessible to a wider range of participants. Litecoin is often referred to as \"digital silver\" to Bitcoin's \"digital gold\" and is used for peer-to-peer transactions, online purchases, and as a store of value.",
+  "name": "litecoin",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Litecoin.jpg"
+ },
+ {
+  "Fullname": "Monero",
+  "symbol": "xmr",
+  "description": "Monero is a privacy-focused cryptocurrency launched in 2014, designed to provide secure, private, and untraceable transactions. Unlike Bitcoin, which offers pseudonymous transactions, Monero employs various privacy-enhancing technologies, including ring signatures, stealth addresses, and confidential transactions, to obfuscate sender, recipient, and transaction amounts. Monero's privacy features make it popular among users seeking financial privacy and anonymity in their transactions.",
+  "name": "monero",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Monero.png"
+ },
+ {
+  "Fullname": "Blockchain",
+  "symbol": "Không có Symbol",
+  "description": "Blockchain is a distributed ledger technology that enables the secure and transparent recording of transactions across multiple parties in a decentralized network. Each transaction is verified and recorded in a block, which is linked to previous blocks, forming a chronological chain of blocks (hence the name \"blockchain\"). Blockchain technology eliminates the need for trusted intermediaries, such as banks or clearinghouses, by enabling peer-to-peer transactions and consensus mechanisms that ensure the integrity and immutability of the ledger.",
+  "name": "blockchain",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Blockchain.jpg"
+ },
+ {
+  "Fullname": "Axie Infinity",
+  "symbol": "axs",
+  "description": "Axie Infinity is a blockchain-based online multiplayer game developed by Sky Mavis, where players collect, breed, battle, and trade digital creatures called Axies. Built on the Ethereum blockchain, Axie Infinity incorporates elements of strategy, role-playing, and collectible card games, allowing players to earn rewards and cryptocurrency tokens by participating in battles, completing quests, and engaging in the in-game economy. Axie Infinity has gained popularity for its play-to-earn model, enabling players to monetize their gameplay and assets.",
+  "name": "axieinfinity",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Axie Infinity.jpg"
+ },
+ {
+  "Fullname": "Steam",
+  "symbol": "Không có Symbol",
+  "description": "Steam is a digital distribution platform developed by Valve Corporation for purchasing, downloading, and playing video games and other digital content. Launched in 2003, Steam provides a centralized marketplace for game developers to distribute their titles to a global audience of gamers, offering features such as automatic updates, social networking, and community-driven content. Steam accepts various payment methods, including credit cards, PayPal, and cryptocurrency, and has become one of the largest digital storefronts for PC gaming.",
+  "name": "steam",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Steam.jpg"
+ },
+ {
+  "Fullname": "Fullnamecoin",
+  "symbol": "NMC",
+  "description": "Fullnamecoin is a decentralized blockchain-based system for registering and managing domain names on the internet. Launched in 2011 as a fork of Bitcoin, Fullnamecoin extends the functionality of blockchain technology to enable the creation of censorship-resistant domain name registrations, decentralized DNS (Domain Fullname System) resolution, and secure online identity management. Fullnamecoin aims to provide a decentralized alternative to traditional domain name registrars and DNS providers, promoting internet freedom and censorship resistance.",
+  "name": "namecoin",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Fullnamecoin.jpg"
+ },
+ {
+  "Fullname": "Hyperledger",
+  "symbol": "Không có Symbol",
+  "description": "Hyperledger is an open-source collaborative effort hosted by the Linux Foundation, focused on advancing cross-industry blockchain technologies and enterprise-grade distributed ledger frameworks. Established in 2015, Hyperledger brings together leading companies, organizations, and developers to develop modular, interoperable blockchain platforms and tools for building and deploying business applications. Hyperledger projects include Hyperledger Fabric, Hyperledger Sawtooth, Hyperledger Indy, and Hyperledger Besu, among others.",
+  "name": "hyperledger",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Hyperledger.png"
+ },
+ {
+  "Fullname": "Linux Foundation",
+  "symbol": "Không có Symbol",
+  "description": "The Linux Foundation is a nonprofit organization dedicated to promoting, protecting, and advancing the growth of open-source software and collaborative development communities. Founded in 2000, the Linux Foundation provides resources, governance, and infrastructure support for open-source projects, including the Linux kernel, Kubernetes, Node.js, and Hyperledger, among others. The Linux Foundation also offers training, certification, and events to foster collaboration and innovation within the open-source ecosystem.",
+  "name": "linuxfoundation",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Linux Foundation.png"
+ },
+ {
+  "Fullname": "Internet of Things",
+  "symbol": "iot",
+  "description": "The Internet of Things (IoT) refers to the network of interconnected devices, objects, and sensors that collect, exchange, and transmit data over the internet without human intervention. IoT devices range from consumer electronics and smart home appliances to industrial machinery and wearable gadgets, each equipped with sensors, actuators, and communication interfaces for interacting with the physical world and other devices. IoT technology enables remote monitoring, automation, and data-driven decision-making across various industries, including healthcare, manufacturing, transportation, and agriculture.",
+  "name": "internetofthings",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Internet of Things.jpg"
+ },
+ {
+  "Fullname": "Oracle DBMS",
+  "symbol": "Không có Symbol",
+  "description": "Oracle Database Management System (DBMS) is a relational database management system developed by Oracle Corporation for storing, organizing, and managing structured data. Oracle DBMS provides a comprehensive set of features for database administration, data integrity, security, and scalability, making it suitable for enterprise-level applications with high availability and performance requirements. Oracle DBMS supports SQL (Structured Query Language) for querying and manipulating data, as well as advanced features such as partitioning, clustering, and data compression.",
+  "name": "oracledbms",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Oracle DBMS.png"
+ },
+ {
+  "Fullname": "QR Code",
+  "symbol": "qr",
+  "description": "QR Code (Quick Response Code) is a two-dimensional barcode matrix that consists of black squares arranged on a white square grid, which can be read by an imaging device, such as a smartphone camera or QR code scanner. QR codes encode information, such as URLs, text, contact details, or other data, allowing users to quickly access content or perform actions by scanning the code with a compatible device. QR codes are widely used for various applications, including mobile payments, product packaging, event ticketing, and digital marketing.",
+  "name": "qrcode",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/QR Code.png"
+ },
+ {
+  "Fullname": "Cardano",
+  "symbol": "ada",
+  "description": "Cardano is a blockchain platform and cryptocurrency created by Input Output Hong Kong (IOHK), led by Charles Hoskinson. Launched in 2017, Cardano aims to provide a secure and scalable infrastructure for building and deploying decentralized applications (dApps) and smart contracts. Cardano uses a proof-of-stake (PoS) consensus mechanism called Ouroboros, which is designed to be more energy-efficient and scalable than traditional proof-of-work (PoW) systems. Cardano's native cryptocurrency is ADA, which is used for transactions and governance within the network.",
+  "name": "cardano",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Cardano.jpg"
+ },
+ {
+  "Fullname": "Solana",
+  "symbol": "sol",
+  "description": "Solana is a high-performance blockchain platform designed for decentralized applications (dApps) and crypto-native projects. Founded by Anatoly Yakovenko in 2017, Solana aims to address scalability and throughput issues faced by existing blockchain networks by introducing innovative consensus and validation mechanisms. Solana uses a proof-of-history (PoH) consensus mechanism combined with a proof-of-stake (PoS) system called Tower BFT (Byzantine Fault Tolerance), enabling fast and low-cost transactions with high throughput and sub-second finality.",
+  "name": "solana",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Solana.jpg"
+ },
+ {
+  "Fullname": "Polkadot",
+  "symbol": "dot",
+  "description": "Polkadot is a decentralized blockchain platform founded by Dr. Gavin Wood, one of the co-founders of Ethereum. Launched in 2020, Polkadot enables the interoperability and scalability of multiple blockchains within its network, known as parachains, allowing them to share security, consensus, and transaction processing capabilities. Polkadot uses a unique relay chain architecture and a nominated proof-of-stake (NPoS) consensus mechanism to facilitate cross-chain communication, data sharing, and interoperability between different blockchain networks.",
+  "name": "polkadot",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Polkadot.png"
+ },
+ {
+  "Fullname": "Bill Gates",
+  "symbol": "Không có Symbol",
+  "description": "Bill Gates is an American business magnate, software developer, philanthropist, and co-founder of Microsoft Corporation, one of the world's largest technology companies. Born in 1955, Gates co-founded Microsoft with Paul Allen in 1975 and played a pivotal role in the development of the personal computer revolution with the creation of the MS-DOS operating system and Microsoft Windows. Gates served as CEO of Microsoft until 2000 and later focused on philanthropy through the Bill & Melinda Gates Foundation, addressing global health, education, and poverty issues.",
+  "name": "billgates",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Bill Gates.jpg"
+ },
+ {
+  "Fullname": "Ripple",
+  "symbol": "xrp",
+  "description": "Ripple is a technology company and cryptocurrency platform that provides real-time gross settlement (RTGS) and remittance services for financial institutions and payment providers. Founded in 2012 by Chris Larsen and Jed McCaleb, Ripple aims to facilitate cross-border payments and money transfers by leveraging blockchain technology and digital assets, such as XRP. Ripple's products include RippleNet, a global payment network, and On-Demand Liquidity (ODL), a liquidity solution for cross-border payments using XRP as a bridge currency.",
+  "name": "ripple",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Ripple.jpg"
+ },
+ {
+  "Fullname": "Terra",
+  "symbol": "luna",
+  "description": "Terra is a blockchain protocol and stablecoin platform designed to provide price-stable cryptocurrencies for payments and decentralized finance (DeFi) applications. Founded by Daniel Shin and Do Kwon in 2018, Terra uses a dual-token system consisting of Terra (LUNA) and stablecoins pegged to various fiat currencies, such as TerraUSD (UST). Terra's stablecoins are algorithmically stabilized through a decentralized reserve mechanism, enabling fast, low-cost, and scalable payments without the volatility associated with traditional cryptocurrencies.",
+  "name": "terra",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Terra.png"
+ },
+ {
+  "Fullname": "Filecoin",
+  "symbol": "fil",
+  "description": "Filecoin is a decentralized storage network and cryptocurrency designed to enable the secure and decentralized storage of digital data. Developed by Protocol Labs and led by Juan Benet, Filecoin uses blockchain technology and cryptographic incentives to create a marketplace for storage providers (miners) and storage clients (users). Filecoin miners earn FIL tokens by providing storage space and retrieving data from the network, while users pay FIL tokens to store and retrieve data in a secure and decentralized manner.",
+  "name": "filecoin",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Filecoin.png"
+ },
+ {
+  "Fullname": "Dogecoin",
+  "symbol": "doge",
+  "description": "Dogecoin is a cryptocurrency created by software engineers Billy Markus and Jackson Palmer in 2013 as a \"joke currency\" based on the popular \"Doge\" internet meme featuring a Shiba Inu dog. Despite its humorous origins, Dogecoin has gained a large and active community of supporters and developers, who use it for tipping, charitable donations, and as a digital currency for everyday transactions. Dogecoin features a fast block time and low transaction fees, making it popular for microtransactions and social media tipping.",
+  "name": "dogecoin",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Dogecoin.jpg"
+ },
+ {
+  "Fullname": "Tezos",
+  "symbol": "xtz",
+  "description": "Tezos is a blockchain platform and cryptocurrency created by Arthur Breitman and Kathleen Breitman in 2018. Tezos aims to provide a self-amending blockchain protocol that allows for on-chain governance, formal verification of smart contracts, and decentralized application (dApp) development. Tezos uses a liquid proof-of-stake (LPoS) consensus mechanism and a self-amending mechanism called \"on-chain governance\" to enable stakeholders to propose and vote on protocol upgrades and amendments without hard forks.",
+  "name": "tezos",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Tezos.png"
+ },
+ {
+  "Fullname": "Tron",
+  "symbol": "trx",
+  "description": "Tron is a blockchain-based platform and cryptocurrency founded by Justin Sun in 2017. Tron aims to create a decentralized internet ecosystem for digital content, entertainment, and decentralized applications (dApps) by leveraging blockchain technology and peer-to-peer (P2P) networking. Tron features a delegated proof-of-stake (DPoS) consensus mechanism and supports smart contracts and decentralized finance (DeFi) applications. Tron's native cryptocurrency is TRX, which is used for transactions, staking, and governance within the Tron network.",
+  "name": "tron",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Tron.png"
+ },
+ {
+  "Fullname": "Substrate",
+  "symbol": "Không có Symbol",
+  "description": "Substrate is a blockchain development framework created by Parity Technologies for building customized blockchain networks and decentralized applications (dApps). Released in 2019, Substrate provides a modular and extensible architecture that allows developers to define their own consensus mechanisms, governance models, and economic policies, without having to build everything from scratch. Substrate is designed to simplify the process of blockchain development and enable interoperability between different blockchain networks.",
+  "name": "substrate",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Substrate.png"
+ },
+ {
+  "Fullname": "Ouroboros Consensus Protocol",
+  "symbol": "Không có Symbol",
+  "description": "Ouroboros is a proof-of-stake (PoS) consensus protocol used in the Cardano blockchain platform. Developed by researchers at IOHK, Ouroboros aims to provide secure and scalable blockchain consensus through a combination of cryptographic techniques and game theory principles. Ouroboros ensures network security and transaction finality by randomly selecting stakeholders to produce new blocks and participate in the consensus process, based on their stake and reputation within the network.",
+  "name": "ouroborosconsensusprotocol",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Ouroboros Consensus Protocol.png"
+ },
+ {
+  "Fullname": "Proof of History",
+  "symbol": "PoH",
+  "description": "Proof of History (PoH) is a cryptographic technique developed by Solana to provide a verifiable and immutable record of time and ordering for transactions in a blockchain network. PoH uses a decentralized clock based on cryptographic proofs to timestamp transactions and establish a linear ordering of events, enabling fast and efficient consensus and validation without sacrificing security or decentralization. PoH is one of the key innovations of the Solana blockchain platform, contributing to its high throughput and low latency.",
+  "name": "proofofhistory",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Proof of History.jpg"
+ },
+ {
+  "Fullname": "Ripple Protocol Consensus Algorithm",
+  "symbol": "RPCA",
+  "description": "The Ripple Protocol Consensus Algorithm (RPCA) is a consensus mechanism used in the Ripple network to achieve agreement on the validity and ordering of transactions across multiple nodes. RPCA is a federated Byzantine agreement (FBA) algorithm that relies on a network of trusted validators to reach consensus on the state of the ledger through a series of rounds of voting and agreement. RPCA enables fast and scalable transaction processing in the Ripple network, making it suitable for real-time gross settlement (RTGS) and cross-border payments.",
+  "name": "rippleprotocolconsensusalgorithm",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Ripple Protocol Consensus Algorithm.png"
+ },
+ {
+  "Fullname": "Avalanche Protocol",
+  "symbol": "AVAX",
+  "description": "The Avalanche Protocol is a consensus mechanism and blockchain platform developed by Ava Labs, led by Emin Gün Sirer. Avalanche aims to provide fast, efficient, and highly scalable decentralized networks for applications such as financial services, decentralized finance (DeFi), and enterprise solutions. Avalanche uses a novel consensus algorithm called Avalanche consensus, which employs a probabilistic, leaderless, and asynchronous approach to achieve rapid transaction finality and network security.",
+  "name": "avalancheprotocol",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Avalanche Protocol.png"
+ },
+ {
+  "Fullname": "Cosmos SDK",
+  "symbol": "Không có Symbol",
+  "description": "The Cosmos Software Development Kit (SDK) is a framework for building interoperable, scalable, and customizable blockchain applications and networks. Developed by the Interchain Foundation, Cosmos SDK provides developers with a set of tools, libraries, and modules for creating sovereign blockchain zones (chains) that can communicate and transact with each other through the Cosmos Hub. Cosmos SDK enables developers to define their own consensus mechanisms, governance models, and economic policies, facilitating the creation of interconnected blockchain ecosystems.",
+  "name": "cosmossdk",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Cosmos SDK.jpg"
+ },
+ {
+  "Fullname": "Chainlink Protocol",
+  "symbol": "Không có Symbol",
+  "description": "The Chainlink Protocol is a decentralized oracle network that connects smart contracts with real-world data and external APIs. Developed by SmartContract Chainlink Limited, Chainlink provides a secure and reliable way to access off-chain data, such as market prices, weather forecasts, and sports scores, within smart contracts on blockchain platforms. Chainlink's decentralized oracle network consists of nodes (or oracles) that fetch and verify data from multiple sources, ensuring accuracy, reliability, and tamper resistance for smart contract applications.",
+  "name": "chainlinkprotocol",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Chainlink Protocol.jpg"
+ },
+ {
+  "Fullname": "Binance Smart Chain",
+  "symbol": "bsc",
+  "description": "Binance Smart Chain (BSC) is a blockchain platform developed by Binance, one of the largest cryptocurrency exchanges in the world. Launched in 2020, Binance Smart Chain is designed to provide a high-performance and low-cost infrastructure for building decentralized applications (dApps) and smart contracts, compatible with the Ethereum Virtual Machine (EVM) and existing Ethereum tools and libraries. BSC uses a proof-of-stake (PoS) consensus mechanism called Byzantine Fault Tolerance (BFT), which enables fast block times and high throughput for transaction processing.",
+  "name": "binancesmartchain",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Binance Smart Chain.png"
+ },
+ {
+  "Fullname": "Bitcoin Cash",
+  "symbol": "BCH",
+  "description": "Bitcoin Cash (BCH) is a cryptocurrency that forked from the original Bitcoin (BTC) blockchain in 2017, aiming to address scalability issues and enable faster and cheaper transactions. Bitcoin Cash increases the block size limit to 8 MB, allowing for more transactions to be processed per block compared to Bitcoin's 1 MB block size limit. Bitcoin Cash supporters argue that larger blocks result in lower transaction fees and faster confirmation times, making it more suitable for everyday payments and microtransactions.",
+  "name": "bitcoincash",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Bitcoin Cash.png"
+ },
+ {
+  "Fullname": "Algorand",
+  "symbol": "algo",
+  "description": "Algorand is a blockchain platform and cryptocurrency founded by Silvio Micali, a Turing Award-winning computer scientist. Launched in 2019, Algorand aims to provide a scalable, secure, and decentralized infrastructure for building and deploying blockchain applications and financial services. Algorand uses a pure proof-of-stake (PPoS) consensus mechanism, where users are randomly selected as block producers based on their stake in the network, ensuring fairness, security, and decentralization.",
+  "name": "algorand",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Algorand.png"
+ },
+ {
+  "Fullname": "Vitalik Buterin",
+  "symbol": "Không có Symbol",
+  "description": "Vitalik Buterin is a Russian-Canadian computer scientist, programmer, and co-founder of Ethereum, one of the leading blockchain platforms for decentralized applications (dApps) and smart contracts. Born in 1994, Buterin became interested in blockchain technology and cryptocurrencies at a young age, co-founding Bitcoin Magazine in 2011. In 2013, Buterin proposed the idea for Ethereum, a blockchain platform that enables developers to build and deploy decentralized applications using smart contracts. Buterin continues to be involved in the development and governance of the Ethereum ecosystem as one of its most prominent figures.",
+  "name": "vitalikbuterin",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Vitalik Buterin.jpg"
+ },
+ {
+  "Fullname": "Charles Hoskinson",
+  "symbol": "Không có Symbol",
+  "description": "Charles Hoskinson is a mathematician, entrepreneur, and blockchain developer known for his contributions to the cryptocurrency industry. Hoskinson was one of the co-founders of Ethereum and served as the project's initial CEO before leaving to co-found IOHK (Input Output Hong Kong), a blockchain research and development company. Under Hoskinson's leadership, IOHK has developed blockchain platforms such as Cardano, a third-generation blockchain protocol designed for scalability, interoperability, and sustainability.",
+  "name": "charleshoskinson",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Charles Hoskinson.jpg"
+ },
+ {
+  "Fullname": "Gavin Wood",
+  "symbol": "Không có Symbol",
+  "description": "Gavin Wood is a computer scientist, programmer, and co-founder of Ethereum. Wood played a key role in the development of Ethereum as the co-founder and former Chief Technology Officer (CTO) of the Ethereum Foundation. He is also the creator of Solidity, Ethereum's smart contract programming language, and the author of the Ethereum Yellow Paper, which describes the technical specifications of the Ethereum blockchain. In 2016, Wood founded Parity Technologies, a blockchain infrastructure company that develops software solutions for Ethereum and other blockchain platforms.",
+  "name": "gavinwood",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Gavin Wood.jpg"
+ },
+ {
+  "Fullname": "Dan Larimer",
+  "symbol": "Không có Symbol",
+  "description": "Dan Larimer is a computer scientist, programmer, and serial entrepreneur known for his work in the cryptocurrency and blockchain space. Larimer has founded several blockchain projects, including BitShares, a decentralized exchange and financial platform, and Steem, a blockchain-based social media platform. He is also the co-founder of EOS.IO, a blockchain platform designed for scalable decentralized applications (dApps) and smart contracts. Larimer's work has focused on building scalable and high-performance blockchain solutions for various applications, including finance, social media, and gaming.",
+  "name": "danlarimer",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Dan Larimer.jpg"
+ },
+ {
+  "Fullname": "Changpeng Zhao",
+  "symbol": "CZ",
+  "description": "Changpeng Zhao, also known as CZ, is a Chinese-Canadian entrepreneur and the founder and CEO of Binance, one of the world's largest cryptocurrency exchanges by trading volume. Zhao previously worked at blockchain.info and OKCoin before founding Binance in 2017. Under Zhao's leadership, Binance has grown rapidly to become a leading platform for trading various cryptocurrencies, offering a wide range of services, including spot trading, futures trading, staking, and decentralized finance (DeFi) products.",
+  "name": "changpengzhao",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Changpeng Zhao.jpg"
+ },
+ {
+  "Fullname": "Sergey Nazarov",
+  "symbol": "Không có Symbol",
+  "description": "Sergey Nazarov is a Russian-American entrepreneur and the co-founder of Chainlink, a decentralized oracle network that connects smart contracts with real-world data. Nazarov has a background in computer science and finance and has been involved in the blockchain industry since its early days. He co-founded Chainlink in 2017 to address the need for reliable, tamper-proof data feeds for smart contracts, enabling secure and trustworthy interactions between blockchain-based applications and external data sources.",
+  "name": "sergeynazarov",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Sergey Nazarov.jpg"
+ },
+ {
+  "Fullname": "Gavin Andresen",
+  "symbol": "Không có Symbol",
+  "description": "Gavin Andresen is a computer scientist and software developer known for his early involvement in Bitcoin and contributions to its development. Andresen was appointed by Bitcoin's anonymous creator, Satoshi Nakamoto, as the lead developer of the Bitcoin Core software project in 2010. He played a key role in maintaining and improving the Bitcoin protocol until 2014 when he stepped down from his position as lead developer. Andresen continues to be involved in the cryptocurrency space as a vocal advocate and advisor.",
+  "name": "gavinandresen",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Gavin Andresen.jpg"
+ },
+ {
+  "Fullname": "Arthur Breitman",
+  "symbol": "Không có Symbol",
+  "description": "Arthur Breitman is a computer scientist and entrepreneur known for co-founding Tezos, a blockchain platform for smart contracts and decentralized applications (dApps). Breitman, along with his wife Kathleen Breitman, conceptualized Tezos in 2014 as a self-amending blockchain protocol that enables on-chain governance and formal verification of smart contracts. Tezos raised one of the largest initial coin offerings (ICOs) in history in 2017 and has since become known for its emphasis on security, scalability, and community governance.",
+  "name": "arthurbreitman",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Arthur Breitman.jpg"
+ },
+ {
+  "Fullname": "Brian Armstrong",
+  "symbol": "Không có Symbol",
+  "description": "Brian Armstrong is an American entrepreneur and the co-founder and CEO of Coinbase, one of the largest cryptocurrency exchanges in the world. Armstrong founded Coinbase in 2012 with the mission of making cryptocurrency accessible and easy to use for mainstream users. Under his leadership, Coinbase has become a leading platform for buying, selling, and storing various cryptocurrencies, serving millions of customers worldwide. Armstrong is known for his advocacy of blockchain technology and cryptocurrency adoption.",
+  "name": "brianarmstrong",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Brian Armstrong.jpg"
+ },
+ {
+  "Fullname": "Andre Cronje",
+  "symbol": "Không có Symbol",
+  "description": "Andre Cronje is a South African software developer and the creator of Yearn Finance (YFI), one of the leading decentralized finance (DeFi) protocols in the cryptocurrency space. Cronje is known for his prolific contributions to the DeFi ecosystem, having developed numerous DeFi projects and protocols, including Yearn Finance, which automates yield farming strategies to maximize returns for users. Cronje's work has been instrumental in driving innovation and growth in the DeFi sector.",
+  "name": "andrecronje",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Andre Cronje.jpg"
+ },
+ {
+  "Fullname": "Massachusetts Institute of Technology",
+  "symbol": "MIT",
+  "description": "The Massachusetts Institute of Technology (MIT) is a prestigious research university located in Cambridge, Massachusetts, known for its excellence in science, engineering, technology, and entrepreneurship. MIT has been actively involved in blockchain and cryptocurrency research and education, offering courses, workshops, and research initiatives on blockchain technology, cryptocurrency economics, and decentralized systems. MIT's Digital Currency Initiative (DCI) is a leading research group focused on advancing the development and adoption of blockchain technology and cryptocurrencies.",
+  "name": "massachusettsinstitutetechnology",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Massachusetts Institute of Technology.jpg"
+ },
+ {
+  "Fullname": "Catalini",
+  "symbol": "Không có Symbol",
+  "description": "Christian Catalini is an economist and professor at the Massachusetts Institute of Technology (MIT) Sloan School of Management, known for his research on blockchain technology, cryptocurrency economics, and digital innovation. Catalini has conducted extensive research on the economics of blockchain-based systems, tokenization, and the impact of decentralized technologies on industries such as finance, healthcare, and intellectual property. He is also a co-founder of the MIT Cryptoeconomics Lab, which explores the intersection of economics and cryptography.",
+  "name": "catalini",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Catalini.jpg"
+ },
+ {
+  "Fullname": "Tucker",
+  "symbol": "Không có Symbol",
+  "description": "Tucker is an artificial intelligence (AI) assistant developed by OpenAI, known for its ability to understand and generate human-like text based on natural language processing (NLP) technology. Tucker's advanced AI capabilities enable it to assist users with a wide range of tasks, including answering questions, providing information, and engaging in natural conversations. Tucker is designed to continually improve and adapt its responses based on user interactions and feedback, making it a versatile and intelligent virtual assistant.",
+  "name": "tucker",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Tucker.jpg"
+ },
+ {
+  "Fullname": "Cryptocurrency",
+  "symbol": "Không có Symbol",
+  "description": "Cryptocurrency is a digital or virtual currency that uses cryptography for security and operates on decentralized networks, typically based on blockchain technology. Cryptocurrencies are decentralized and peer-to-peer in nature, meaning they are not controlled by any central authority, such as a government or financial institution. Bitcoin, created by an anonymous person or group of people using the pseudonym Satoshi Nakamoto, was the first cryptocurrency, introduced in 2009. Since then, thousands of other cryptocurrencies, often referred to as altcoins, have been created, each with its own unique features and use cases.",
+  "name": "cryptocurrency",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Cryptocurrency.jpg"
+ },
+ {
+  "Fullname": "Coinbase",
+  "symbol": "Không có Symbol",
+  "description": "Coinbase is a cryptocurrency exchange and wallet platform founded in 2012 by Brian Armstrong and Fred Ehrsam. Based in San Francisco, California, Coinbase provides a user-friendly interface for buying, selling, and storing various cryptocurrencies, including Bitcoin, Ethereum, and Litecoin. Coinbase offers services for both retail investors and institutional clients, including trading, custody, and cryptocurrency merchant solutions. Coinbase is known for its security, regulatory compliance, and ease of use, making it one of the most popular and trusted cryptocurrency platforms in the world.",
+  "name": "coinbase",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Coinbase.png"
+ },
+ {
+  "Fullname": "Distributed ledger",
+  "symbol": "Không có Symbol",
+  "description": "A distributed ledger is a type of database that is shared, replicated, and synchronized across multiple locations or participants in a network. Unlike traditional centralized databases, which are controlled by a single authority or organization, distributed ledgers are decentralized and maintained by a network of nodes, each storing a copy of the ledger and participating in the validation and consensus process. Blockchain is a specific type of distributed ledger that uses cryptographic techniques to secure and validate transactions, forming a chain of blocks linked together in a chronological and immutable sequence.",
+  "name": "distributedledger",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Distributed ledger.png"
+ },
+ {
+  "Fullname": "Hyperledger Fabric",
+  "symbol": "Không có Symbol",
+  "description": "Hyperledger Fabric is an open-source enterprise blockchain platform developed by the Linux Foundation's Hyperledger project. Hyperledger Fabric is designed for building permissioned blockchain networks with modular architecture, allowing organizations to customize and deploy their own blockchain solutions for specific use cases. Hyperledger Fabric supports smart contracts, decentralized applications (dApps), and enterprise-grade features such as privacy, confidentiality, and scalability, making it suitable for a wide range of industries and applications.",
+  "name": "hyperledgerfabric",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Hyperledger Fabric.png"
+ },
+ {
+  "Fullname": "Corda",
+  "symbol": "Không có Symbol",
+  "description": "Corda is an open-source blockchain platform developed by R3, a consortium of major financial institutions, for building decentralized applications (dApps) and enterprise blockchain solutions. Corda is designed specifically for businesses and financial institutions, offering features such as privacy, scalability, and interoperability with existing systems. Corda uses a unique approach to blockchain consensus and validation, focusing on individual transactions and data privacy between parties, making it suitable for complex financial transactions and regulatory compliance.",
+  "name": "corda",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Corda.png"
+ },
+ {
+  "Fullname": "Quorum",
+  "symbol": "Không có Symbol",
+  "description": "Quorum is an open-source enterprise blockchain platform developed by JPMorgan Chase for building permissioned blockchain networks and applications. Quorum is based on the Ethereum blockchain and is designed specifically for financial services and enterprise use cases, offering features such as privacy, confidentiality, and high throughput. Quorum supports smart contracts, tokenization, and distributed applications (dApps) and is used by JPMorgan Chase and other financial institutions for various blockchain initiatives, including payments, trading, and supply chain finance.",
+  "name": "quorum",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Quorum.png"
+ },
+ {
+  "Fullname": "United States Dollar",
+  "symbol": "usd",
+  "description": "USD is the abbreviation for the United States dollar, the official currency of the United States of America and the world's primary reserve currency. The USD is issued and regulated by the Federal Reserve System, the central banking system of the United States, and is used as the standard currency for international trade and finance. In the context of cryptocurrencies, USD often refers to stablecoins, which are digital tokens pegged to the value of the US dollar and used for trading, payments, and remittances within blockchain networks and cryptocurrency exchanges.",
+  "name": "unitedstatesdollar",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/United States Dollar.jpg"
+ },
+ {
+  "Fullname": "Database",
+  "symbol": "Không có Symbol",
+  "description": "A database is an organized collection of structured data stored and managed in a computer system, typically designed for efficient data storage, retrieval, and manipulation. Databases are widely used in various applications and industries to store and manage information, such as customer records, financial transactions, inventory data, and more. Common types of databases include relational databases, NoSQL databases, and distributed databases, each offering different features and capabilities for handling different types of data and workloads.",
+  "name": "database",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Database.jpg"
+ },
+ {
+  "Fullname": "McKinsey & Company",
+  "symbol": "Không có Symbol",
+  "description": "McKinsey & Company is a global management consulting firm known for its expertise in strategy, operations, technology, and analytics. Founded in 1926, McKinsey advises leading organizations, governments, and institutions on a wide range of business challenges and opportunities, helping clients optimize performance, drive growth, and achieve sustainable results. McKinsey has been actively involved in advising clients on blockchain technology and digital transformation initiatives, providing insights and strategies for leveraging blockchain for business innovation and competitive advantage.",
+  "name": "mckinseycompany",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/McKinsey & Company.jpg"
+ },
+ {
+  "Fullname": "Defi",
+  "symbol": "Không có Symbol",
+  "description": "DeFi, short for decentralized finance, refers to a rapidly growing ecosystem of financial applications and services built on blockchain technology, aiming to recreate traditional financial systems in a decentralized and permissionless manner. DeFi protocols enable users to access a wide range of financial products and services, including lending, borrowing, trading, asset management, and derivatives trading, without relying on traditional financial intermediaries, such as banks or brokerages. DeFi has gained traction for its potential to democratize access to finance, increase financial inclusion, and reduce barriers to entry in the global financial system.",
+  "name": "defi",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Defi.jpg"
+ },
+ {
+  "Fullname": "Banking as a Service",
+  "symbol": "baas",
+  "description": "Banking as a Service (BaaS) refers to the provision of banking services and infrastructure by third-party companies, such as fintech startups or technology firms, to other businesses or developers through APIs (Application Programming Interfaces). BaaS enables non-bank entities to offer banking products and services, such as payments, account management, lending, and compliance, without having to build and maintain their own banking infrastructure. BaaS platforms provide the necessary tools and resources for businesses to integrate banking functionality into their applications and services, facilitating innovation and competition in the financial services industry.",
+  "name": "bankingasaservice",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Banking as a Service.png"
+ },
+ {
+  "Fullname": "Mike Winkelmann",
+  "symbol": "beeple",
+  "description": "Mike Winkelmann, also known as Beeple, is a digital artist known for his groundbreaking work in digital art and NFTs (non-fungible tokens). Winkelmann gained widespread attention for his \"Everydays\" project, in which he created and shared a new digital artwork every day for over 13 years. He made headlines in 2021 when he sold a digital collage artwork titled \"Everydays: The First 5000 Days\" as an NFT for $69 million at auction, making it one of the most expensive digital artworks ever sold.",
+  "name": "mikewinkelmann",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Mike Winkelmann.jpg"
+ },
+ {
+  "Fullname": "Hard Fork",
+  "symbol": "Không có Symbol",
+  "description": "A hard fork is a significant change or update to the protocol of a blockchain network that is not backwards-compatible, resulting in a permanent divergence from the previous version of the blockchain. Hard forks typically occur when there is disagreement among network participants about proposed changes to the protocol, leading to a split in the blockchain and the creation of a new branch or chain with different rules and consensus mechanisms. Hard forks can be planned upgrades or contentious events and may result in the creation of new cryptocurrencies or communities.",
+  "name": "hardfork",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Hard Fork.png"
+ },
+ {
+  "Fullname": "Truffle",
+  "symbol": "Không có Symbol",
+  "description": "Truffle is a popular development framework for building decentralized applications (dApps) and smart contracts on blockchain platforms such as Ethereum. Developed by ConsenSys, Truffle provides a suite of tools, libraries, and development environments for writing, testing, deploying, and managing smart contracts and dApps. Truffle includes features such as built-in testing, debugging, and asset management, making it easier for developers to streamline the development process and ensure the quality and security of their blockchain applications.",
+  "name": "truffle",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Truffle.png"
+ },
+ {
+  "Fullname": "Daniel Field",
+  "symbol": "Không có Symbol",
+  "description": "Daniel Field is an entrepreneur and co-founder of Mintbase, a platform for creating and trading NFTs (non-fungible tokens) on the Ethereum blockchain. Mintbase allows users to mint, buy, sell, and trade NFTs representing digital and physical assets, such as art, collectibles, tickets, and virtual real estate. Field is a prominent figure in the NFT space and has been actively involved in promoting the adoption of NFT technology for creative expression, digital ownership, and decentralized finance (DeFi) applications.",
+  "name": "danielfield",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Daniel Field.jpg"
+ },
+ {
+  "Fullname": "Ayman Omar",
+  "symbol": "Không có Symbol",
+  "description": "Ayman Omar is a software engineer and co-founder of Paras, a platform for creating and trading NFTs (non-fungible tokens) on the Ethereum blockchain. Paras enables artists, creators, and developers to mint, buy, sell, and trade NFTs representing digital artwork, collectibles, and virtual goods. Omar is passionate about blockchain technology and its potential to revolutionize digital ownership, creative expression, and decentralized economies. He is actively involved in the NFT community and ecosystem, advocating for innovation and adoption of NFT technology.",
+  "name": "aymanomar",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Ayman Omar.jpg"
+ },
+ {
+  "Fullname": "Metaverse",
+  "symbol": "Không có Symbol",
+  "description": "The metaverse is a collective virtual space or universe that encompasses all virtual worlds, augmented reality (AR) environments, and digital assets interconnected through the internet. The concept of the metaverse originated in science fiction literature and has gained prominence with the rise of virtual reality (VR), online gaming, and blockchain technology. The metaverse is envisioned as a persistent, immersive, and interconnected digital realm where users can interact, socialize, work, play, and transact with each other and virtual objects in real-time.",
+  "name": "metaverse",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Metaverse.jpg"
+ },
+ {
+  "Fullname": "Polygon",
+  "symbol": "matic",
+  "description": "Polygon is a scaling solution and framework for building and connecting Ethereum-compatible blockchain networks, also known as Layer 2 solutions. Formerly known as Matic Network, Polygon aims to address the scalability and usability issues of the Ethereum blockchain by providing tools, infrastructure, and protocols for developing and deploying scalable decentralized applications (dApps). Polygon uses sidechains, plasma chains, and other Layer 2 scaling techniques to offload transactions from the Ethereum mainnet, enabling faster and cheaper transactions with improved user experience.",
+  "name": "polygon",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Polygon.png"
+ },
+ {
+  "Fullname": "Aave",
+  "symbol": "aave",
+  "description": "Aave is a decentralized finance (DeFi) protocol and lending platform built on the Ethereum blockchain, allowing users to lend, borrow, and earn interest on cryptocurrency assets. Founded by Stani Kulechov in 2017, Aave enables users to deposit cryptocurrencies into liquidity pools and earn interest by providing liquidity to borrowers, who can borrow assets against collateralized positions. Aave's decentralized lending protocol uses smart contracts and automated market-making algorithms to facilitate peer-to-peer lending and borrowing without intermediaries.",
+  "name": "aave",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Aave.png"
+ },
+ {
+  "Fullname": "Quickswap",
+  "symbol": "Không có Symbol",
+  "description": "Quickswap is a decentralized exchange (DEX) and automated market maker (AMM) built on the Polygon blockchain, formerly known as Matic Network. Quickswap enables users to swap various Ethereum-based tokens and provide liquidity to decentralized liquidity pools, earning trading fees and incentives in return. As a Layer 2 solution on Polygon, Quickswap offers fast and low-cost transactions compared to traditional Ethereum-based DEXs, making it popular among DeFi users and liquidity providers.",
+  "name": "quickswap",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Quickswap.jpg"
+ },
+ {
+  "Fullname": "Mai Finance",
+  "symbol": "Không có Symbol",
+  "description": "Mai Finance is a decentralized lending and borrowing protocol built on the Avalanche blockchain, offering users access to overcollateralized loans and synthetic assets. Mai Finance enables users to borrow stablecoins against their crypto assets as collateral or mint synthetic assets that track the price of real-world assets, such as stocks, commodities, and fiat currencies. Mai Finance's lending platform uses a decentralized autonomous organization (DAO) governance model and incentivizes liquidity providers with governance tokens and yield farming rewards.",
+  "name": "maifinance",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Mai Finance.jpg"
+ },
+ {
+  "Fullname": "Decentral Games",
+  "symbol": "Không có Symbol",
+  "description": "Decentral Games is a decentralized autonomous organization (DAO) and virtual gaming platform built on the Ethereum blockchain, offering users a virtual world where they can play, socialize, and earn cryptocurrency rewards. Decentral Games features a variety of virtual casino games, including poker, roulette, slots, and blackjack, where players can bet and win cryptocurrency prizes using non-fungible tokens (NFTs) and decentralized finance (DeFi) assets. Decentral Games aims to merge gaming and finance within the metaverse, creating new opportunities for digital ownership and economic activity.",
+  "name": "decentralgames",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Decentral Games.png"
+ },
+ {
+  "Fullname": "NEAR Protocol",
+  "symbol": "NEAR",
+  "description": "NEAR Protocol is a decentralized blockchain platform and smart contract platform designed to enable the creation and deployment of scalable decentralized applications (dApps) and digital assets. NEAR uses a sharded, proof-of-stake (PoS) consensus mechanism to achieve high throughput and low latency, allowing developers to build efficient and user-friendly applications on the platform. NEAR supports multiple programming languages and provides tools and infrastructure for developers to easily create, deploy, and monetize dApps on the blockchain.",
+  "name": "nearprotocol",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/NEAR Protocol.png"
+ },
+ {
+  "Fullname": "Paras",
+  "symbol": "Không có Symbol",
+  "description": "Paras is a platform for creating, buying, selling, and trading non-fungible tokens (NFTs) representing digital artwork, collectibles, and virtual goods. Built on the Ethereum blockchain, Paras enables artists, creators, and developers to monetize their digital creations and engage with fans and collectors in a decentralized marketplace. Paras aims to empower creators and enthusiasts to participate in the emerging digital economy of NFTs, fostering creativity, ownership, and community within the blockchain ecosystem.",
+  "name": "paras",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Paras.jpg"
+ },
+ {
+  "Fullname": "Mintbase",
+  "symbol": "Không có Symbol",
+  "description": "Mintbase is a platform for creating and trading non-fungible tokens (NFTs) on the Ethereum blockchain, allowing users to mint, buy, sell, and trade digital artwork, collectibles, and virtual goods. Mintbase provides tools and infrastructure for artists, creators, and developers to tokenize and monetize their creations, enabling peer-to-peer transactions and decentralized ownership within the blockchain ecosystem. Mintbase aims to democratize access to NFT technology and empower creators to reach global audiences.",
+  "name": "mintbase",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Mintbase.png"
+ },
+ {
+  "Fullname": "Acala",
+  "symbol": "aca",
+  "description": "Acala is a decentralized finance (DeFi) platform and parachain on the Polkadot network, offering users access to decentralized lending, stablecoins, and liquidity protocols. Acala enables users to borrow stablecoins against their crypto assets as collateral, earn interest on deposited assets, and provide liquidity to decentralized liquidity pools, earning rewards in return. Acala's DeFi protocols are interoperable with other blockchains and DeFi platforms, allowing users to access liquidity and financial services across multiple networks.",
+  "name": "acala",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Acala.jpg"
+ },
+ {
+  "Fullname": "Moonbeam",
+  "symbol": "Không có Symbol",
+  "description": "Moonbeam is a decentralized blockchain platform and parachain on the Polkadot network, designed to provide compatibility and interoperability with the Ethereum blockchain ecosystem. Moonbeam enables developers to deploy Ethereum-compatible smart contracts and decentralized applications (dApps) on its platform, leveraging existing Ethereum tools, libraries, and developer communities. Moonbeam aims to bridge the gap between Ethereum and Polkadot, offering a scalable and interoperable infrastructure for building and deploying cross-chain dApps.",
+  "name": "moonbeam",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Moonbeam.jpg"
+ },
+ {
+  "Fullname": "Unique Network",
+  "symbol": "Không có Symbol",
+  "description": "Unique Network is a decentralized gaming platform and marketplace built on the Polkadot network, offering users access to non-fungible tokens (NFTs) representing digital assets and in-game items. Unique Network enables game developers to tokenize and monetize their creations, allowing players to buy, sell, and trade NFTs across multiple games and platforms. Unique Network aims to create a vibrant and interoperable gaming ecosystem within the Polkadot ecosystem, fostering creativity, ownership, and community engagement.",
+  "name": "uniquenetwork",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Unique Network.jpg"
+ },
+ {
+  "Fullname": "Flare Network",
+  "symbol": "Không có Symbol",
+  "description": "Flare Network is a decentralized blockchain platform and network that enables the issuance and utilization of smart contracts for various blockchain ecosystems, including Ethereum and XRP Ledger. Flare Network introduces the concept of the \"F-Asset\" protocol, which allows for the creation of trustless representations of assets from other blockchains, such as Ethereum-based tokens, on the Flare Network. Flare Network aims to enhance interoperability and expand the utility of decentralized finance (DeFi) and smart contracts across multiple blockchain networks.",
+  "name": "flarenetwork",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Flare Network.png"
+ },
+ {
+  "Fullname": "State Connector",
+  "symbol": "Không có Symbol",
+  "description": "The State Connector is a feature of the Flare Network that enables bidirectional communication and interoperability between the Flare Network and other blockchain networks, such as Ethereum. The State Connector allows smart contracts deployed on the Flare Network to interact with and access data and assets from external blockchains, enabling cross-chain functionality and decentralized applications (dApps) that span multiple networks. The State Connector enhances the interoperability and utility of the Flare Network within the broader blockchain ecosystem.",
+  "name": "stateconnector",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/State Connector.png"
+ },
+ {
+  "Fullname": "Algorand Ventures",
+  "symbol": "Không có Symbol",
+  "description": "Algorand Ventures is the venture capital arm of Algorand, a decentralized blockchain platform and cryptocurrency founded by Silvio Micali. Algorand Ventures invests in early-stage startups and projects building innovative solutions and applications on the Algorand blockchain, with a focus on decentralized finance (DeFi), digital assets, and blockchain infrastructure. Algorand Ventures aims to support and accelerate the growth of the Algorand ecosystem by providing funding, mentorship, and strategic resources to promising entrepreneurs and developers.",
+  "name": "algorandventures",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Algorand Ventures.jpg"
+ },
+ {
+  "Fullname": "Minswap DEX",
+  "symbol": "Không có Symbol",
+  "description": "Minswap DEX is a decentralized exchange (DEX) built on the Mina blockchain, a lightweight, succinct blockchain designed for scalability and privacy. Minswap enables users to swap tokens, provide liquidity to decentralized liquidity pools, and earn rewards in the form of transaction fees and governance tokens. Minswap leverages zero-knowledge proofs and recursive zk-SNARKs to ensure privacy and confidentiality of transactions, making it suitable for privacy-conscious users and applications.",
+  "name": "minswapdex",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Minswap DEX.jpg"
+ },
+ {
+  "Fullname": "Sandbox",
+  "symbol": "Không có Symbol",
+  "description": "The Sandbox is a virtual gaming platform and metaverse built on blockchain technology, allowing users to create, own, and monetize virtual assets and experiences. The Sandbox features a user-generated content (UGC) platform where players can build and customize their own virtual worlds, games, and experiences using digital assets called Non-Fungible Tokens (NFTs). The Sandbox aims to empower creators, gamers, and developers to participate in the emerging virtual economy, fostering creativity, collaboration, and economic opportunity within the metaverse.",
+  "name": "sandbox",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Sandbox.jpg"
+ },
+ {
+  "Fullname": "Sebastian Borget",
+  "symbol": "Không có Symbol",
+  "description": "Sebastian Borget is an entrepreneur and co-founder of The Sandbox, a virtual gaming platform and metaverse built on blockchain technology. Borget is passionate about gaming, virtual reality, and blockchain technology, and has been actively involved in promoting the adoption of NFTs (non-fungible tokens) for virtual assets and experiences. He is a prominent figure in the blockchain gaming community and has been instrumental in the development and growth of The Sandbox ecosystem.",
+  "name": "sebastianborget",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Sebastian Borget.jpg"
+ },
+ {
+  "Fullname": "Dirk Leuth",
+  "symbol": "Không có Symbol",
+  "description": "Dirk Leuth is an entrepreneur and co-founder of The Sandbox, a virtual gaming platform and metaverse built on blockchain technology. Leuth has a background in gaming, technology, and entrepreneurship, and is passionate about the intersection of blockchain and virtual worlds. He is dedicated to building The Sandbox into a leading platform for user-generated content, gaming, and social interaction within the emerging metaverse. Leuth is actively involved in driving innovation and community engagement within The Sandbox ecosystem.",
+  "name": "dirkleuth",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Dirk Leuth.jpg"
+ },
+ {
+  "Fullname": "Sweat",
+  "symbol": "Không có Symbol",
+  "description": "Sweat is a blockchain-based fitness and wellness platform that rewards users with cryptocurrency tokens for exercising and achieving their fitness goals. Sweat uses a decentralized application (dApp) and wearable technology to track users' physical activity and verify their workouts, rewarding them with cryptocurrency tokens based on their performance and participation. Sweat aims to incentivize healthy behaviors and motivate individuals to stay active by providing tangible rewards and incentives through blockchain technology.",
+  "name": "sweat",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Sweat.jpg"
+ },
+ {
+  "Fullname": "Twitter",
+  "symbol": "Không có Symbol",
+  "description": "Twitter is a social media platform and microblogging service that allows users to post and interact with short messages, known as \"tweets,\" in real-time. Founded in 2006, Twitter has become one of the most popular and influential social media platforms in the world, with millions of users sharing news, opinions, and updates on various topics, including politics, technology, entertainment, and finance. Twitter has also emerged as a prominent platform for discussions about blockchain technology, cryptocurrencies, and decentralized finance (DeFi), with many industry leaders and influencers sharing insights and engaging with the community on the platform.",
+  "name": "twitter",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Twitter.png"
+ },
+ {
+  "Fullname": "Elon Musk",
+  "symbol": "Không có Symbol",
+  "description": "Elon Musk is an entrepreneur, inventor, and CEO of various companies, including Tesla, SpaceX, Neuralink, and The Boring Company. Musk is known for his visionary leadership and ambitious goals in advancing technology and space exploration. He has also been actively involved in the cryptocurrency space, expressing interest in Bitcoin and other digital assets through his social media presence. Musk's tweets and statements about cryptocurrencies have often sparked market movements and debates within the crypto community, making him a polarizing figure in the industry.",
+  "name": "elonmusk",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Elon Musk.jpg"
+ },
+ {
+  "Fullname": "SoFi",
+  "symbol": "Không có Symbol",
+  "description": "SoFi, short for Social Finance, is a financial technology company that offers a range of products and services, including student loan refinancing, personal loans, mortgages, investment management, and insurance. Founded in 2011, SoFi aims to provide innovative financial solutions and empower individuals to achieve financial independence and success. SoFi has also ventured into the cryptocurrency space, offering cryptocurrency trading, investing, and lending services to its customers.",
+  "name": "sofi",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/SoFi.png"
+ },
+ {
+  "Fullname": "Ethereum Request for Comment 20",
+  "symbol": "erc20",
+  "description": "Ethereum Request for Comment (ERC) 20 is a technical standard used for creating and implementing fungible tokens on the Ethereum blockchain. ERC-20 tokens are digital assets that can represent various types of assets, such as cryptocurrencies, utility tokens, and asset-backed tokens, and are interchangeable and divisible. The ERC-20 standard defines a set of rules and functions that enable interoperability and compatibility between different Ethereum-based tokens, allowing developers to create and deploy tokens with common features and behaviors.",
+  "name": "ethereumrequestforcomment20",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Ethereum Request for Comment 20.jpg"
+ },
+ {
+  "Fullname": "Enterprise software",
+  "symbol": "Không có Symbol",
+  "description": "Enterprise software refers to computer programs and applications designed specifically for use by businesses and organizations to improve efficiency, productivity, and operations. Enterprise software includes a wide range of software solutions, such as customer relationship management (CRM), enterprise resource planning (ERP), supply chain management (SCM), human resource management (HRM), and business intelligence (BI) systems. Enterprise software is typically scalable, customizable, and integrated with other systems and technologies used within an organization.",
+  "name": "enterprisesoftware",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Enterprise software.jpg"
+ },
+ {
+  "Fullname": "Stuart Haber",
+  "symbol": "Không có Symbol",
+  "description": "Stuart Haber is a computer scientist and cryptographer known for his pioneering work in the field of blockchain technology and digital timestamping. Haber, along with W. Scott Stornetta, developed the first practical method for timestamping digital documents using cryptographic techniques, laying the foundation for the creation of blockchain technology. Their research on digital timestamping and secure document certification paved the way for the development of blockchain-based systems for secure and tamper-proof record-keeping.",
+  "name": "stuarthaber",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/Stuart Haber.jpg"
+ },
+ {
+  "Fullname": "W. Scott StornettaScott Stornetta",
+  "symbol": "scottstornetta",
+  "description": "W. Scott Stornetta is a computer scientist and cryptographer known for his groundbreaking work in the field of blockchain technology and digital timestamping. Stornetta, along with Stuart Haber, developed the first practical method for timestamping digital documents using cryptographic techniques, which formed the basis for the creation of blockchain technology. Their research on secure document certification and tamper-proof record-keeping laid the groundwork for the development of blockchain-based systems for various applications, including cryptocurrency, smart contracts, and decentralized finance (DeFi).",
+  "name": "wscottstornetta",
+  "image": "D:/Code/Search_Blockchain/src/main/java/FileStorge/Image/W. Scott Stornetta Scott Stornetta.jpg"
+ }
+]
