@@ -189,8 +189,6 @@ public class MainFrame extends javax.swing.JFrame {
     if(entity!=null){        
         ImageIcon icon = new ImageIcon(entity.getImage());
         JLabel imageOut = new JLabel();
-        imageOut.setIcon(icon);
-        imageOut.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         
         JLabel nameOut = new JLabel("   "+entity.getFullName());
         JLabel symbolOut = new JLabel("    "+entity.getSymbol());
@@ -205,7 +203,24 @@ public class MainFrame extends javax.swing.JFrame {
         JPanel TextPanel = new JPanel();                
         imageOut.setHorizontalAlignment(JLabel.CENTER);
         imageOut.setVerticalAlignment(JLabel.CENTER);
-        TextPanel.setLayout(new BoxLayout(TextPanel, BoxLayout.Y_AXIS));        
+        TextPanel.setLayout(new BoxLayout(TextPanel, BoxLayout.Y_AXIS));
+        Dimension maxSize = new Dimension(290, 290);
+        ImagePanel.setMaximumSize(maxSize);
+        
+        // Kích thước tối đa của panel
+        int maxWidth = 290;
+        int maxHeight = 290;
+        // Tính toán tỉ lệ scale
+        double scale = Math.min((double) maxWidth / icon.getIconWidth(), (double) maxHeight / icon.getIconHeight());
+
+        // Scale ảnh
+        int scaledWidth = (int) (icon.getIconWidth() * scale);
+        int scaledHeight = (int) (icon.getIconHeight() * scale);
+        Image scaledImage = icon.getImage().getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
+        icon = new ImageIcon(scaledImage);       
+        imageOut.setIcon(icon);
+        imageOut.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        
         ImagePanel.add(imageOut);
         TextPanel.add(nameOut);
         if(!entity.getSymbol().equals("Không có Symbol") ) TextPanel.add(symbolOut);
@@ -385,26 +400,29 @@ public class MainFrame extends javax.swing.JFrame {
     
     // phần xử lý khi thao tác Enter hoặc là bấm Button Search
     private void solve() {
-        // Xoá màn hình
-        clearLayout();
-        clearObject();
-        try {
-            String search = TextForSearch.getText().trim();
-            if(!search.equals("")) {
-                ArrayList<News> ans = searchSuggestion(search);
-                ContentPanel(ans);
-                EntityFind(search);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        
-        updateScrollPane();
-        
-        // Thêm panel mới vào Content và cập nhật hiển thị
-        Content.revalidate();
-        Content.repaint();
+    String search = TextForSearch.getText();
+    if (search == null || search.trim().isEmpty()) {
+        return; // Không làm gì nếu xâu nhập vào là rỗng hoặc null
     }
+    // Xoá màn hình
+    clearLayout();
+    clearObject();
+    
+    try {
+        search = search.trim(); // Loại bỏ khoảng trắng thừa
+        ArrayList<News> ans = searchSuggestion(search);
+        ContentPanel(ans);
+        EntityFind(search);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    
+    updateScrollPane();
+    
+    // Thêm panel mới vào Content và cập nhật hiển thị
+    Content.revalidate();
+    Content.repaint();
+}
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -483,7 +501,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         ObjectLayout.setVerticalGroup(
             ObjectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 610, Short.MAX_VALUE)
+            .addGap(0, 701, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
@@ -536,8 +554,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Search)
                         .addComponent(Home)))
-                .addGap(18, 18, 18)
-                .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         getAccessibleContext().setAccessibleName("MFrame");
