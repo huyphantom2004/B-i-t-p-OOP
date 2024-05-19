@@ -39,8 +39,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import java.util.NoSuchElementException;
 import javax.swing.border.EmptyBorder;
-import javax.swing.event.HyperlinkEvent;
-import java.net.URISyntaxException;
 /**
  *
  * @author Admin
@@ -57,6 +55,11 @@ public class MainFrame extends javax.swing.JFrame {
     // set up giao diện mặc định
     public MainFrame() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(255,255,255));  
+        
+        TextForSearch.setBackground(new java.awt.Color(235,235,235));
+        TextForSearch.setForeground(new java.awt.Color(0,0,0));
+        
         ScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         Content.setLayout(new BoxLayout(Content, BoxLayout.Y_AXIS));
         Object.setLayout(new BoxLayout(Object, BoxLayout.Y_AXIS));
@@ -131,9 +134,12 @@ public class MainFrame extends javax.swing.JFrame {
         String[] top3Hashtag = TrendExport.MostFrequentTag();
      
         JLabel TrendTopic = new JLabel("Trending");
+            TrendTopic.setForeground(new Color(0, 0, 0)); 
+            TrendTopic.setBackground(new Color(240,248,255));   
+            TrendTopic.setOpaque(true);         
         TrendTopic.setHorizontalAlignment(JLabel.CENTER);
         TrendTopic.setVerticalAlignment(JLabel.CENTER);
-        TrendTopic.setFont(new Font("Segoe UI", Font.PLAIN, 16)); // Font Arial, kích thước 20
+        TrendTopic.setFont(new Font("Roboto", Font.PLAIN, 18)); // Font Arial, kích thước 20
         Font font = TrendTopic.getFont();        
         TrendTopic.setFont(font.deriveFont(font.getStyle() | Font.BOLD ));
         Dimension preferredSize = new Dimension(298, 30);
@@ -144,11 +150,14 @@ public class MainFrame extends javax.swing.JFrame {
             String tag = top3Hashtag[i];
             JLabel Tag = new JLabel("       "+tag);
             Tag.setPreferredSize(preferredSize);  
-            Tag.setFont(new Font("Segoe UI", Font.PLAIN, 14)); // Font Arial, kích thước 20
-            
+            Tag.setFont(new Font("Roboto", Font.PLAIN, 16)); // Font Arial, kích thước 20
+                Tag.setForeground(new Color(0, 0, 0)); 
+                Tag.setBackground(new Color(240,248,255));   
+                Tag.setOpaque(true); 
             Tag.addMouseListener(new MouseAdapter() {
                     @Override
                     public void mouseClicked(MouseEvent  e) {
+                        if (!tag.equals("null")){                            
                         clearLayout();
                         clearObject();
                         ArrayList<News> ans;
@@ -163,7 +172,7 @@ public class MainFrame extends javax.swing.JFrame {
                         updateScrollPane();
                         // Thêm panel mới vào Content và cập nhật hiển thị
                         Content.revalidate();
-                        Content.repaint();
+                        Content.repaint();}
                     }
                     
                     @Override
@@ -192,8 +201,8 @@ public class MainFrame extends javax.swing.JFrame {
         
         JLabel nameOut = new JLabel("   "+entity.getFullName());
         JLabel symbolOut = new JLabel("    "+entity.getSymbol());
-        Font fontN = new Font("Arial", Font.BOLD, 18);
-        Font fontS = new Font("Arial", Font.BOLD, 14);
+        Font fontN = new Font("Roboto", Font.BOLD, 18);
+        Font fontS = new Font("Roboto", Font.BOLD, 14);
         nameOut.setFont(fontN);
         symbolOut.setFont(fontS);
         JLabel descripOut = new JLabel();
@@ -293,16 +302,20 @@ public class MainFrame extends javax.swing.JFrame {
                 ContentPane.setBorder(BorderFactory.createLineBorder(Color.BLACK));
                 ContentPane.setMaximumSize(new Dimension(Integer.MAX_VALUE, 75)); // Thiết lập kích thước tối đa cho panel con
                 ContentPane.setLayout(new GridLayout(3, 1)); // GridLayout cho 3 thành phần này
+                ContentPane.setBackground(new Color(230,230,230));
                     
                 // Lấy các giá trị từ ArrayList News
                 String a = (String) news.getTitle();
                 String b = (String) news.getAuthor();
                 String c = (String) news.getCreateDate();
 
-                JLabel Baiviet = new JLabel("       "+a);
-                JLabel Tacgia = new JLabel("       Tác giả: "+b);
-                JLabel Ngay = new JLabel("       Ngày tạo: "+c);
-                Baiviet.setFont(new Font("Segoe UI", Font.PLAIN, 14)); // Font Arial, kích thước 20
+                JLabel Baiviet = new JLabel("    "+a);
+                JLabel Tacgia = new JLabel("    Author: "+b);
+                JLabel Ngay = new JLabel("    Created Day: "+c);
+                Baiviet.setFont(new Font("Roboto", Font.PLAIN, 14)); 
+                Tacgia.setFont(new Font("Roboto", Font.PLAIN, 12)); 
+                Ngay.setFont(new Font("Roboto", Font.PLAIN, 12));  
+                
                 Dimension nameSize = new Dimension(550, 25);
                 Baiviet.setPreferredSize(nameSize);        
                 Tacgia.setPreferredSize(nameSize);        
@@ -310,56 +323,9 @@ public class MainFrame extends javax.swing.JFrame {
                 
                 Baiviet.addMouseListener(new MouseAdapter() {
                 @Override
-                public void mouseClicked(MouseEvent e) {
-                    // Tạo JFrame chứa JEditorPane hiển thị thông tin tin tức dưới dạng HTML
-                    JFrame outputFrame = new JFrame("Thông tin bài viết");
-                    outputFrame.setTitle("Thông tin bài viết");
-                    Dimension preferredSize = new Dimension(650, 450);
-                    outputFrame.setPreferredSize(preferredSize);
-                    outputFrame.setLocation(400, 250); // Đặt vị trí xuất hiện của JFrame
-
-                    JPanel panel = new JPanel(new BorderLayout());
-                    panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-
-                    JEditorPane htmlPane = new JEditorPane();
-                    htmlPane.setContentType("text/html");
-                    htmlPane.setEditable(false);
-
-                    htmlPane.addHyperlinkListener(a -> {
-                 if (a.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
-                 if (Desktop.isDesktopSupported()) {
-                 try {
-                Desktop.getDesktop().browse(a.getURL().toURI());
-                } catch (IOException | URISyntaxException ex) {
-                ex.printStackTrace();
-                  }
-                 }
-                }
-                });
-                    String htmlContent = "<html><body>" +                                                 
-                        "<p><b>Link bài viết:</b> " + news.getLink() + "</p>" +
-                        "<p><b>Nguồn website:</b> " + news.getWebsite() + "</p>" +
-                        "<p><b>Loại bài viết:</b> " + news.getTypeBlog() + "</p>" +
-                        "<p><b>Tóm tắt bài viết:</b> " + news.getSummary() + "</p>" +   
-                        "<p><b>Tiêu đề bài viết:</b> " + a + "</p>" +    
-                        "<p><b>Nội dung bài viết:</b> <a href=\"" + news.getLink() + "\">Ấn vào đây</a></p>"+
-                        "<p><b>Ngày tạo:</b> " + c + "</p>" +
-                        "<p><b>Tag/Hash tag:</b> " + news.getHashTag() + "</p>" +
-                        "<p><b>Tác giả:</b> " + b + "</p>" +    
-                        "<p><b>Chuyên mục:</b> " + news.getCategory() + "</p>" +
-                        "</body></html>";
-                    htmlPane.setText(htmlContent);
-                    JScrollPane scrollPane = new JScrollPane(htmlPane);
-
-                    // Đặt JScrollPane vào JPanel
-                    panel.add(scrollPane, BorderLayout.CENTER);
-                    outputFrame.add(panel);
-                    outputFrame.pack();
-                    outputFrame.setVisible(true);
-                    htmlPane.setCaretPosition(0);
-                }
-
-                    
+                public void mouseClicked(MouseEvent e) {    
+                    DisplayContent.Display(news);
+                }                  
                     @Override
                     public void mouseEntered(MouseEvent e) {
                         // Khi chuột vào, đặt font in đậm và có gạch chân
@@ -439,58 +405,68 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Search_API");
+        setBackground(new java.awt.Color(24, 26, 32));
         setName("MainFrame"); // NOI18N
 
+        TextForSearch.setBackground(new java.awt.Color(230, 230, 230));
+        TextForSearch.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(235, 235, 235)), javax.swing.BorderFactory.createEmptyBorder(5, 5, 5, 5)));
         TextForSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextForSearchActionPerformed(evt);
             }
         });
 
-        Home.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Home.setBackground(new java.awt.Color(240, 248, 255));
+        Home.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
         Home.setText("Home");
+        Home.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Home.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HomeActionPerformed(evt);
             }
         });
 
-        Search.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Search.setBackground(new java.awt.Color(240, 248, 255));
+        Search.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
         Search.setText("Search");
+        Search.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SearchActionPerformed(evt);
             }
         });
 
-        MainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        MainPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        Content.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Content.setBackground(new java.awt.Color(230, 230, 230));
+        Content.setBorder(javax.swing.BorderFactory.createEmptyBorder(5, 1, 1, 1));
 
         javax.swing.GroupLayout ContentLayout = new javax.swing.GroupLayout(Content);
         Content.setLayout(ContentLayout);
         ContentLayout.setHorizontalGroup(
             ContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
+            .addGap(0, 604, Short.MAX_VALUE)
         );
         ContentLayout.setVerticalGroup(
             ContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 819, Short.MAX_VALUE)
         );
 
+        Trending.setBackground(new java.awt.Color(240, 248, 255));
         Trending.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         javax.swing.GroupLayout TrendingLayout = new javax.swing.GroupLayout(Trending);
         Trending.setLayout(TrendingLayout);
         TrendingLayout.setHorizontalGroup(
             TrendingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 294, Short.MAX_VALUE)
+            .addGap(0, 292, Short.MAX_VALUE)
         );
         TrendingLayout.setVerticalGroup(
             TrendingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 126, Short.MAX_VALUE)
+            .addGap(0, 133, Short.MAX_VALUE)
         );
 
+        Object.setBackground(new java.awt.Color(240, 248, 255));
         Object.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         javax.swing.GroupLayout ObjectLayout = new javax.swing.GroupLayout(Object);
@@ -501,7 +477,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         ObjectLayout.setVerticalGroup(
             ObjectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 701, Short.MAX_VALUE)
+            .addGap(0, 703, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
@@ -509,6 +485,7 @@ public class MainFrame extends javax.swing.JFrame {
         MainPanelLayout.setHorizontalGroup(
             MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(Content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -518,11 +495,15 @@ public class MainFrame extends javax.swing.JFrame {
         );
         MainPanelLayout.setVerticalGroup(
             MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(MainPanelLayout.createSequentialGroup()
-                .addComponent(Trending, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Object, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MainPanelLayout.createSequentialGroup()
+                        .addComponent(Trending, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Object, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(MainPanelLayout.createSequentialGroup()
+                        .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -534,10 +515,10 @@ public class MainFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(Home)
-                .addGap(26, 26, 26)
-                .addComponent(TextForSearch)
+                .addGap(17, 17, 17)
+                .addComponent(Home, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TextForSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 639, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(Search, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
@@ -547,15 +528,13 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(TextForSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Search)
-                        .addComponent(Home)))
-                .addGap(35, 35, 35)
-                .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
+                        .addComponent(TextForSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Home, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Search, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

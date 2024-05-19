@@ -33,7 +33,7 @@ public class TrendExport {
             Map<String, Integer> hashtagCounts = new HashMap<>();
             for (Object obj : jsonArray) {
                 JSONObject jsonObject = (JSONObject) obj;
-                JSONArray hashtags = (JSONArray) jsonObject.get("Tag/Hash tag đi kèm");
+                JSONArray hashtags = (JSONArray) jsonObject.get("Hashtag đi kèm");
 
                 for (Object hashtagObj : hashtags) {
                     String hashtag = (String) hashtagObj;
@@ -46,7 +46,7 @@ public class TrendExport {
             sortedHashtags.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
             int i = 0;
             for (Map.Entry<String, Integer> entry : sortedHashtags) {
-                if ((!entry.getKey().equals(""))&&(!entry.getKey().equals("null"))&&entry.getKey() != null){
+                if ((!entry.getKey().equals(""))&&(!entry.getKey().equals("null"))&&entry.getKey() != null&&(!entry.getKey().equals("Không có"))){
                 trending[i] = entry.getKey();
                 i++;
                 if(i==3) break;

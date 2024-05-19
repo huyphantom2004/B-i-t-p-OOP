@@ -30,7 +30,7 @@ public class News {
     @SerializedName("Nội dung chi tiết bài viết")
     private String content;
     
-    @SerializedName("Tag/Hash tag đi kèm")
+    @SerializedName("Hashtag đi kèm")
     private ArrayList<String> hashTag = new ArrayList<String>();
     
     @SerializedName("Ngày tạo")

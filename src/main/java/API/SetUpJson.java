@@ -31,7 +31,7 @@ public class SetUpJson {
             // reader = new FileReader("ProjectAssignment/src/main/java/JsonFile/project.json");
             
             /// địa chỉ tương đối này chỉ dùng được với netbeans
-            reader = new FileReader("src/main/java/TrendingMethod/Contents.json");
+            reader = new FileReader("src/main/java/FileStorge/Contents.json");
             
             /// Địa chỉ tuyệt đối luôn đúng
             
