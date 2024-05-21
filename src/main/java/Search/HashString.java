@@ -1,13 +1,4 @@
-package API;
-
-import static java.lang.Math.pow;
-import static java.lang.StrictMath.pow;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
+package Search;
 /**
  *
  * @author Ngọc

@@ -1,12 +1,9 @@
-package API;
+package FindingEntity;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
-import javax.swing.*;
-import java.awt.*;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -17,12 +14,11 @@ public class EntityFinder  {
     private static Map<String, Entity> entityMap;
     
     public static void main(String args[]) {
-//        EntityFind("bitcoin");
     }
     
     public static void initializeEntities() {
         // Đường dẫn tới file JSON
-        String filePath = "src/main/java/FileStorge/EntityM.json";
+        String filePath = "src/main/java/FileStorge/EntityInfor.json";
         entityMap = readJsonFile(filePath);
     }
 

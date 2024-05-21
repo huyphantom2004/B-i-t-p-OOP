@@ -1,4 +1,4 @@
-package API;
+package FindingEntity;
 
 public class Entity {
     private String Fullname;    

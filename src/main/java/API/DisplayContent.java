@@ -1,17 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
 package API;
+
 import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
 import java.net.URISyntaxException;
 import java.awt.*;
 import java.io.IOException;
-/**
- *
- * @author Admin
- */
+
+import Search.News;
+
 public class DisplayContent {
     public static void Display(News news){
         JFrame frame = new JFrame("Information");
@@ -58,7 +54,6 @@ public class DisplayContent {
                     .addComponent(title)
                 )
         );
-
         titlePanelLayout.setVerticalGroup(
             titlePanelLayout.createSequentialGroup()
                 .addGroup(titlePanelLayout.createParallelGroup(GroupLayout.Alignment.CENTER) 
@@ -113,8 +108,7 @@ public class DisplayContent {
         frame.pack();
         frame.setVisible(true);  
 
-        title.setText("<html><body style='text-align: justify; font-family: Roboto; font-size: 18px;'>"+news.getTitle()+ "</body></html>");
-        
+        title.setText("<html><body style='text-align: justify; font-family: Roboto; font-size: 18px;'>"+news.getTitle()+ "</body></html>");        
         Infor.setEditable(false);
         Infor.setText("<html><body style='font-family: Roboto; font-size: 12px; text-align: justify;'>" +
                     "<p><b>Author:</b> " + news.getAuthor() + "</p>" +
@@ -141,14 +135,12 @@ public class DisplayContent {
         });        
         content.setEditable(false);                
         content.setText("<html><body style='text-align: justify; font-family: Roboto; font-size: 12px;'>"+ news.getContent() + "</body></html>");
-        content.setCaretPosition(0);
-        
+        content.setCaretPosition(0);        
 }
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        // TODO code application logic here
-       
+        // TODO code application logic here      
     }
 }

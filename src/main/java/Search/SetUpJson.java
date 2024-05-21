@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package API;
+package Search;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -49,13 +45,13 @@ public class SetUpJson {
                 lHash.getLast().setHash();
             }
         } catch (FileNotFoundException e) {
-            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(API.MainFrame.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             if(reader != null) {
                 try {
                     reader.close();
                 } catch (IOException e) {
-                    Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, e);
+                    Logger.getLogger(API.MainFrame.class.getName()).log(Level.SEVERE, null, e);
                 }
             }
         }
