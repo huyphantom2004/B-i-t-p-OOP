@@ -1,4 +1,4 @@
-package crawler;
+package Crawler;
 
 import javax.swing.JOptionPane;
 import org.jsoup.Jsoup;
