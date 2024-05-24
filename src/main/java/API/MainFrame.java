@@ -17,16 +17,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.simple.parser.ParseException;
-/**
- *
- * @author Admin
- */
+
 public class MainFrame extends javax.swing.JFrame {
-
-    /**
-     * Creates new form API_EDIT
-     */
-
     static private ArrayList<News> listNews =  new ArrayList<>(); /// lưu thông tin các bài viết
     static private ArrayList<HashString> lHash = new ArrayList<HashString>(); // Tìm kiếm ký tự cần tìm trong các bài viết
     
@@ -107,7 +99,8 @@ public class MainFrame extends javax.swing.JFrame {
         Object.repaint();
     }
     private void TopTrending(){
-        String[] top3Hashtag = TrendExport.MostFrequentTag();
+        TrendExport trendExport = new TrendExport();
+        String[] top3Hashtag = trendExport.mostFrequentTag();
      
         JLabel TrendTopic = new JLabel("Trending");
             TrendTopic.setForeground(new Color(0, 0, 0)); 
@@ -168,7 +161,8 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }
     private void EntityFind(String text){
-    Entity entity =  EntityFinder.FindEntity(text);
+    EntityFinder ent = new EntityFinder();
+    Entity entity =  ent.FindEntity(text);
     if(entity!=null){        
         ImageIcon icon = new ImageIcon(entity.getImage());
         JLabel imageOut = new JLabel();
@@ -295,8 +289,9 @@ public class MainFrame extends javax.swing.JFrame {
                 
                 Baiviet.addMouseListener(new MouseAdapter() {
                 @Override
-                public void mouseClicked(MouseEvent e) {    
-                    DisplayContent.Display(news);
+                public void mouseClicked(MouseEvent e) { 
+                    DisplayContent display = new DisplayContent();
+                    display.Display(news);
                 }                  
                     @Override
                     public void mouseEntered(MouseEvent e) {
@@ -553,7 +548,6 @@ public class MainFrame extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
         setup();
         /* Create and display the form */

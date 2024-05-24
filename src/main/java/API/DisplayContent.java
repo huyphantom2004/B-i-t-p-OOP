@@ -9,7 +9,7 @@ import java.io.IOException;
 import Search.News;
 
 public class DisplayContent {
-    public static void Display(News news){
+    public void Display(News news){
         JFrame frame = new JFrame("Information");
         frame.setSize(800, 600);
         frame.setLocation(400, 120); // Đặt vị trí xuất hiện của JFrame
@@ -137,10 +137,4 @@ public class DisplayContent {
         content.setText("<html><body style='text-align: justify; font-family: Roboto; font-size: 12px;'>"+ news.getContent() + "</body></html>");
         content.setCaretPosition(0);        
 }
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        // TODO code application logic here      
-    }
 }

@@ -11,12 +11,9 @@ import java.util.Map;
 
 public class EntityFinder  {
 
-    private static Map<String, Entity> entityMap;
+    private Map<String, Entity> entityMap;
     
-    public static void main(String args[]) {
-    }
-    
-    public static void initializeEntities() {
+    public void initializeEntities() {
         // Đường dẫn tới file JSON
         String filePath = "src/main/java/FileStorge/EntityInfor.json";
         entityMap = readJsonFile(filePath);
@@ -52,7 +49,7 @@ public class EntityFinder  {
     private static String preprocessKeyword(String keyword) {
         return keyword.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
     }
-    public static Entity FindEntity(String text) {
+    public Entity FindEntity(String text) {
         initializeEntities();                
         String findText = preprocessKeyword(text);
         if (!findText.isEmpty() && entityMap != null) {

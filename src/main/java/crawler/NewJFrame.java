@@ -23,14 +23,9 @@ import java.util.List;
  * @author HP
  */
 public class NewJFrame extends javax.swing.JFrame {
-
-    /**
-     * Creates new form NewJFrame
-     */
     public NewJFrame() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -139,8 +134,6 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
         String url = jTextField1.getText();
         if (url.isEmpty() || !isValidURL(url)) {
         JOptionPane.showMessageDialog(this, "Vui lòng nhập URL hợp lệ!!!", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -155,16 +148,14 @@ public class NewJFrame extends javax.swing.JFrame {
         }
     }
 }
-    
     private boolean isValidURL(String urlStr) {
     try {
         URI uri = new URI(urlStr);
         return uri != null && uri.getScheme() != null && (uri.getScheme().equalsIgnoreCase("http") || uri.getScheme().equalsIgnoreCase("https"));
     } catch (URISyntaxException e) {
         return false;
+        }
     }
-    }
-
     private boolean isUrlInJson(String url) {
     try (FileReader reader = new FileReader("src/main/java/FileStorge/Contents.json")) {
         JSONParser jsonParser = new JSONParser();
@@ -185,8 +176,7 @@ public class NewJFrame extends javax.swing.JFrame {
         e.printStackTrace();
     }
     return false;
-}
-    
+    } 
     private void getDataFromUrl(String url) {
         try {
             Document doc = Jsoup.connect(url).get();
@@ -229,15 +219,12 @@ public class NewJFrame extends javax.swing.JFrame {
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-
         // Bổ sung thông tin mới vào mảng JSON
         jsonArray.add(newJsonInfo);
-
         // Ghi mảng JSON đã cập nhật trở lại vào file
         try (FileWriter fileWriter = new FileWriter("src/main/java/FileStorge/Contents.json")) {
             fileWriter.write(jsonArray.toJSONString());
         }
-
             jEditorPane1.setContentType("text/html");
             jEditorPane1.setText(
             "<html>" +
@@ -254,14 +241,11 @@ public class NewJFrame extends javax.swing.JFrame {
             "<b>Chuyên mục mà bài viết thuộc về:</b> " + category +
             "</body>" +
             "</html>" );
-            
-            jEditorPane1.setCaretPosition(0);
-            
+            jEditorPane1.setCaretPosition(0);      
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
- 
     private String getArticleType(String source,String content) {
     source = source.toLowerCase();
     content = content.toLowerCase();
@@ -273,15 +257,12 @@ public class NewJFrame extends javax.swing.JFrame {
         return "Facebook Post";
     } else {
         return "News Article";
-    }
-}
-
-    
+        }
+    } 
     private String getTitle(Document doc) {
         Element titleElement = doc.selectFirst("h1, h2");
         return titleElement != null ? titleElement.text() : "Không có ";
     }
-
     private String getLastUpdatedDate(Document doc) {
         Element lastUpdatedDiv = doc.selectFirst("div.last-updated-on");
         if (lastUpdatedDiv != null) {
@@ -292,7 +273,7 @@ public class NewJFrame extends javax.swing.JFrame {
         if (lastUpdatedDate.isEmpty()) {
             Element dateDiv = doc.selectFirst("div.writtenby_date");
             lastUpdatedDate = dateDiv != null ? extractDate(dateDiv.text()) : "";
-
+            
             if (lastUpdatedDate.isEmpty()) {
                 Element dateSpan = doc.selectFirst("span.date");
                 lastUpdatedDate = dateSpan != null ? extractDate(dateSpan.text()) : "";
@@ -318,16 +299,13 @@ public class NewJFrame extends javax.swing.JFrame {
                         break;
                     }
                 }
-
                 if (updatedDateElement != null) {
                     lastUpdatedDate = updatedDateElement.text();
                 }
             }
         }
-
         return lastUpdatedDate;
     }
-
     private String getAuthor(Document doc) {
         Element authorLink = doc.selectFirst("a[href*=/authors/]");
         String author = authorLink != null ? authorLink.text() : "";
@@ -362,10 +340,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
         return author;
     }
-
-
-
-
     private String getSourceFromUrl(String url) {
         try {
             URI uri = new URI(url);
@@ -378,7 +352,6 @@ public class NewJFrame extends javax.swing.JFrame {
         }
         return "Không xác định";
     }
-
     private String[] getHashtags(Document doc) {
         List<String> hashtagsList = new ArrayList<>();
         
@@ -392,25 +365,21 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         }
-
         Elements topicLinks = doc.select("a.font-barlow.breadcrumbs__link");
         for (Element topicLink : topicLinks) {
             if (!topicLink.text().isEmpty()) {
                 hashtagsList.add("#" + topicLink.text());
             }
         }
-
         Elements tagLinks = doc.select("a[rel=tag]");
         for (Element tagLink : tagLinks) {
             if (!tagLink.text().isEmpty()) {
                 hashtagsList.add("#" + tagLink.text());
             }
         }
-
         if (!hashtagsList.isEmpty()) {
             return hashtagsList.toArray(String[]::new);
         }
-
         return new String[]{"Không có"};
     }
 
@@ -440,8 +409,7 @@ public class NewJFrame extends javax.swing.JFrame {
             return "Không có";
         }
     }
-}
-    
+} 
     private static String extractContent(Elements elements) {
     StringBuilder contentBuilder = new StringBuilder();
     for (Element element : elements) {

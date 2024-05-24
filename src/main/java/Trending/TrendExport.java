@@ -10,9 +10,7 @@ import java.util.*;
  * @author Admin
  */
 public class TrendExport {
-    public static void main(String[] args) {
-    }
-    public static String[] MostFrequentTag(){
+    public String[] mostFrequentTag() {
         String filePath = "src/main/java/FileStorge/Contents.json";
         String[] trending = new String[3];
         try {
@@ -34,16 +32,15 @@ public class TrendExport {
             sortedHashtags.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
             int i = 0;
             for (Map.Entry<String, Integer> entry : sortedHashtags) {
-                if ((!entry.getKey().equals(""))&&(!entry.getKey().equals("null"))&&entry.getKey() != null&&(!entry.getKey().equals("Không có"))){
-                trending[i] = entry.getKey();
-                i++;
-                if(i==3) break;
+                if ((!entry.getKey().equals("")) && (!entry.getKey().equals("null")) && entry.getKey() != null && (!entry.getKey().equals("Không có"))) {
+                    trending[i] = entry.getKey();
+                    i++;
+                    if (i == 3) break;
                 }
             } 
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-           System.out.print(trending);
         return trending;
     }
 }
