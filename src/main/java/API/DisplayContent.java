@@ -115,7 +115,7 @@ public class DisplayContent {
                     "<p><b>Type:</b> " + news.getTypeBlog() + "</p>" +
                     "<p><b>Category:</b> " + news.getCategory() + "</p>" +
                     "<p><b>Created day:</b> " + news.getCreateDate() + "</p>" +
-                    "<p><b>Sumary:</b> " + news.getSummary() + "</p>" +
+                    "<p><b>Sumary:</b> " + news.getSummary().replaceAll("\n", "<br>") + "</p>" +
                     "<p><b>Hashtag:</b>" + news.getHashTag().replaceAll("#", " #") + "</span></p>" +                    
                     "<p><b>Website:</b> " + news.getWebsite() + "</p>" +                           
                     "<p><b>Link:</b> <a href='" + news.getLink() + "'>Click here!</a></p></div>" +
@@ -134,7 +134,7 @@ public class DisplayContent {
             }
         });        
         content.setEditable(false);                
-        content.setText("<html><body style='text-align: justify; font-family: Roboto; font-size: 12px;'>"+ news.getContent() + "</body></html>");
+        content.setText("<html><body style='text-align: justify; font-family: Roboto; font-size: 12px;'>"+ news.getContent().replaceAll("\n", "<br>") + "</body></html>");
         content.setCaretPosition(0);        
 }
 }

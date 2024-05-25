@@ -223,7 +223,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jsonArray.add(newJsonInfo);
         // Ghi mảng JSON đã cập nhật trở lại vào file
         try (FileWriter fileWriter = new FileWriter("src/main/java/FileStorge/Contents.json")) {
-            fileWriter.write(jsonArray.toJSONString());
+            fileWriter.write(PrintJSON(jsonArray.toJSONString()));
         }
             jEditorPane1.setContentType("text/html");
             jEditorPane1.setText(
@@ -244,8 +244,72 @@ public class NewJFrame extends javax.swing.JFrame {
             jEditorPane1.setCaretPosition(0);      
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }        
     }
+    private static String PrintJSON(String jsonString) {
+        StringBuilder prettyJSONBuilder = new StringBuilder();
+        int indentLevel = 0;
+        boolean inQuote = false;
+
+        for (char charFromJson : jsonString.toCharArray()) {
+            switch (charFromJson) {
+                case '"':
+                    // Switch the quoting status
+                    inQuote = !inQuote;
+                    prettyJSONBuilder.append(charFromJson);
+                    break;
+                case ' ':
+                    // For space: ignore the space if it is not being quoted
+                    if (inQuote) {
+                        prettyJSONBuilder.append(charFromJson);
+                    }
+                    break;
+                case '{':
+                case '[':
+                    // Starting a new block
+                    prettyJSONBuilder.append(charFromJson);
+                    if (!inQuote) {
+                        prettyJSONBuilder.append("\n");
+                        indentLevel++;
+                        addIndentation(prettyJSONBuilder, indentLevel);
+                    }
+                    break;
+                case '}':
+                case ']':
+                    // Ending a block
+                    if (!inQuote) {
+                        prettyJSONBuilder.append("\n");
+                        indentLevel--;
+                        addIndentation(prettyJSONBuilder, indentLevel);
+                    }
+                    prettyJSONBuilder.append(charFromJson);
+                    break;
+                case ',':
+                    // Adding a comma separator
+                    prettyJSONBuilder.append(charFromJson);
+                    if (!inQuote) {
+                        prettyJSONBuilder.append("\n");
+                        addIndentation(prettyJSONBuilder, indentLevel);
+                    }
+                    break;
+                case ':':
+                    // Adding a key-value separator
+                    prettyJSONBuilder.append(charFromJson);
+                    if (!inQuote) {
+                        prettyJSONBuilder.append(" ");
+                    }
+                    break;
+                default:
+                    prettyJSONBuilder.append(charFromJson);
+            }
+        }
+        return prettyJSONBuilder.toString();
+    }
+    private static void addIndentation(StringBuilder stringBuilder, int indentLevel) {
+        for (int i = 0; i < indentLevel; i++) {
+            stringBuilder.append("    "); // Using 4 spaces for indentation
+        }
+    }    
     private String getArticleType(String source,String content) {
     source = source.toLowerCase();
     content = content.toLowerCase();
@@ -353,35 +417,51 @@ public class NewJFrame extends javax.swing.JFrame {
         return "Không xác định";
     }
     private String[] getHashtags(Document doc) {
-        List<String> hashtagsList = new ArrayList<>();
-        
-        Element categoryUl = doc.selectFirst("ul.td-category");
-        if (categoryUl != null) {
-            Elements categoryList = categoryUl.select("li.entry-category");
-            for (Element category : categoryList) {
-                Element categoryAnchor = category.selectFirst("a");
-                if (categoryAnchor != null && !categoryAnchor.text().isEmpty()) {
-                    hashtagsList.add("#" + categoryAnchor.text());
-                }
+    List<String> hashtags = new ArrayList<>();
+
+    // Chọn các liên kết của danh mục
+    Element categoryUl = doc.selectFirst("ul.td-category");
+    if (categoryUl != null) {
+        Elements categoryList = categoryUl.select("li.entry-category a");
+        for (Element categoryAnchor : categoryList) {
+            if (!categoryAnchor.text().isEmpty()) {
+                hashtags.add("#" + categoryAnchor.text());
             }
         }
-        Elements topicLinks = doc.select("a.font-barlow.breadcrumbs__link");
-        for (Element topicLink : topicLinks) {
-            if (!topicLink.text().isEmpty()) {
-                hashtagsList.add("#" + topicLink.text());
-            }
-        }
-        Elements tagLinks = doc.select("a[rel=tag]");
-        for (Element tagLink : tagLinks) {
-            if (!tagLink.text().isEmpty()) {
-                hashtagsList.add("#" + tagLink.text());
-            }
-        }
-        if (!hashtagsList.isEmpty()) {
-            return hashtagsList.toArray(String[]::new);
-        }
-        return new String[]{"Không có"};
     }
+
+    // Chọn các liên kết của chủ đề
+    Elements topicLinks = doc.select("a.font-barlow.breadcrumbs__link");
+    for (Element topicLink : topicLinks) {
+        if (!topicLink.text().isEmpty()) {
+            hashtags.add("#" + topicLink.text());
+        }
+    }
+
+    // Chọn các liên kết của thẻ
+    Elements tagLinks = doc.select("a[rel=tag]");
+    for (Element tagLink : tagLinks) {
+        if (!tagLink.text().isEmpty()) {
+            hashtags.add("#" + tagLink.text());
+        }
+    }
+
+    // Chọn các liên kết trong div có id là "topics"
+    Elements topicItems = doc.select("#topics .field__item a");
+    for (Element topicItem : topicItems) {
+        if (!topicItem.text().isEmpty()) {
+            hashtags.add("#" + topicItem.text());
+        }
+    }
+
+    // Nếu không tìm thấy hashtag nào, trả về mảng với một phần tử "Không có"
+    if (hashtags.isEmpty()) {
+        return new String[] { "Không có" };
+    }
+
+    // Chuyển danh sách thành mảng
+    return hashtags.toArray(new String[0]);
+}
 
     private String getSummary(Document doc) {
          Elements pElements = doc.select("p.sc-bbc06255-0.jvmCPb");
