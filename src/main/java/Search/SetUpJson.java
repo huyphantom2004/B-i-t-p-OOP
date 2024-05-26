@@ -45,13 +45,13 @@ public class SetUpJson {
                 lHash.getLast().setHash();
             }
         } catch (FileNotFoundException e) {
-            Logger.getLogger(API.MainFrame.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(GUI.MainFrame.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             if(reader != null) {
                 try {
                     reader.close();
                 } catch (IOException e) {
-                    Logger.getLogger(API.MainFrame.class.getName()).log(Level.SEVERE, null, e);
+                    Logger.getLogger(GUI.MainFrame.class.getName()).log(Level.SEVERE, null, e);
                 }
             }
         }
