@@ -1,8 +1,6 @@
 package GUI;
 
 import Search.*;
-import FindingEntity.*;
-import Trending.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,7 +20,6 @@ public class MainFrame extends javax.swing.JFrame {
     static private ArrayList<News> listNews =  new ArrayList<>(); /// lưu thông tin các bài viết
     static private ArrayList<HashString> lHash = new ArrayList<HashString>(); // Tìm kiếm ký tự cần tìm trong các bài viết
     
-    // set up giao diện mặc định
     public MainFrame() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255,255,255));         
@@ -33,16 +30,8 @@ public class MainFrame extends javax.swing.JFrame {
         Content.setLayout(new BoxLayout(Content, BoxLayout.Y_AXIS));
         Object.setLayout(new BoxLayout(Object, BoxLayout.Y_AXIS));
         Trending.setLayout(new GridLayout(4,1));
-        TopTrending();
-        updateScrollPane();
-        //Khởi tạo toàn bộ bài viết lần đầu tiên
-        clearLayout();
+        TopTrending.TopTrending();
         startup();
-        updateScrollPane();
-        // Thêm panel mới vào Content và cập nhật hiển thị
-        Content.revalidate();
-        Content.repaint();
-     
         // Thêm action cho Enter Key
         Search.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0), "clickButton");
         Search.getActionMap().put("clickButton", new AbstractAction() {
@@ -85,136 +74,14 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }
     private static void startup(){
+        Utilities.clearPanel(MainFrame.Content);
+        Utilities.clearPanel(MainFrame.Object);        
         ContentPanel(listNews);
-    }
-    // Xóa nội dung hiển thị trước đó
-    private static void clearLayout() {
-        Content.removeAll();
-        Content.revalidate();
-        Content.repaint();
-    }
-    private static void clearObject() {
-        Object.removeAll();
-        Object.revalidate();
-        Object.repaint();
-    }
-    private void TopTrending(){
-        TrendExport trendExport = new TrendExport();
-        String[] top3Hashtag = trendExport.mostFrequentTag();
-     
-        JLabel TrendTopic = new JLabel("Trending");
-            TrendTopic.setForeground(new Color(0, 0, 0)); 
-            TrendTopic.setBackground(new Color(240,248,255));   
-            TrendTopic.setOpaque(true);         
-        TrendTopic.setHorizontalAlignment(JLabel.CENTER);
-        TrendTopic.setVerticalAlignment(JLabel.CENTER);
-        TrendTopic.setFont(new Font("Roboto", Font.PLAIN, 18)); // Font Arial, kích thước 20
-        Font font = TrendTopic.getFont();        
-        TrendTopic.setFont(font.deriveFont(font.getStyle() | Font.BOLD ));
-        Dimension preferredSize = new Dimension(298, 30);
-        TrendTopic.setPreferredSize(preferredSize);        
-        Trending.add(TrendTopic);
-        
-        for (int i =0;i<3;i++){
-            String tag = top3Hashtag[i];
-            JLabel Tag = new JLabel("       "+tag);
-            Tag.setPreferredSize(preferredSize);  
-            Tag.setFont(new Font("Roboto", Font.PLAIN, 16)); // Font Arial, kích thước 20
-                Tag.setForeground(new Color(0, 0, 0)); 
-                Tag.setBackground(new Color(240,248,255));   
-                Tag.setOpaque(true); 
-            Tag.addMouseListener(new MouseAdapter() {
-                    @Override
-                    public void mouseClicked(MouseEvent  e) {
-                        if (!tag.equals("null")){                            
-                        clearLayout();
-                        clearObject();
-                        ArrayList<News> ans;
-                        try {
-                            ans = searchSuggestion(tag);
-                            ContentPanel(ans);
-                        } catch (IOException ex) {
-                            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-                        } catch (ParseException ex) {
-                            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                        updateScrollPane();
-                        // Thêm panel mới vào Content và cập nhật hiển thị
-                        Content.revalidate();
-                        Content.repaint();}
-                    }                    
-                    @Override
-                    public void mouseEntered(MouseEvent e) {
-                        // Khi chuột vào, đặt font in đậm và có gạch chân
-                        Font font = Tag.getFont();
-                        Tag.setFont(font.deriveFont(font.getStyle() | Font.BOLD ));
-                    }
-                    @Override
-                    public void mouseExited(MouseEvent e) {
-                        // Khi chuột ra, đặt lại font bình thường
-                        Font font = Tag.getFont();
-                        Tag.setFont(font.deriveFont(font.getStyle() & ~Font.BOLD ));
-                    }
-                });
-            // Thêm JLabel Tag vào container Trending
-            Trending.add(Tag);
-        }
-    }
-    private void EntityFind(String text){
-    EntityFinder ent = new EntityFinder();
-    Entity entity =  ent.FindEntity(text);
-    if(entity!=null){        
-        ImageIcon icon = new ImageIcon(entity.getImage());
-        JLabel imageOut = new JLabel();
-        
-        JLabel nameOut = new JLabel("   "+entity.getFullName());
-        Font fontName = new Font("Roboto", Font.BOLD, 18);
-        nameOut.setFont(fontName);
-        JLabel descripOut = new JLabel();
-        descripOut.setText("<html><div style='text-align:justify;'>" + entity.getDescription().replaceAll("\n", "<br>") + "</div></html>");
-
-        JPanel ImagePanel = new JPanel();
-        JPanel TextPanel = new JPanel();                
-        imageOut.setHorizontalAlignment(JLabel.CENTER);
-        imageOut.setVerticalAlignment(JLabel.CENTER);
-        TextPanel.setLayout(new BoxLayout(TextPanel, BoxLayout.Y_AXIS));
-        Dimension maxSize = new Dimension(290, 290);
-        ImagePanel.setMaximumSize(maxSize);
-        
-        // Kích thước tối đa của panel
-        int maxWidth = 290;
-        int maxHeight = 290;
-        // Tính toán tỉ lệ scale
-        double scale = Math.min((double) maxWidth / icon.getIconWidth(), (double) maxHeight / icon.getIconHeight());
-
-        // Scale ảnh
-        int scaledWidth = (int) (icon.getIconWidth() * scale);
-        int scaledHeight = (int) (icon.getIconHeight() * scale);
-        Image scaledImage = icon.getImage().getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
-        icon = new ImageIcon(scaledImage);       
-        imageOut.setIcon(icon);
-        imageOut.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        nameOut.setAlignmentX(Component.LEFT_ALIGNMENT);
-        descripOut.setAlignmentX(Component.LEFT_ALIGNMENT);
-        ImagePanel.add(imageOut);
-        TextPanel.add(nameOut);
-        TextPanel.add(descripOut); 
-        descripOut.setPreferredSize(TextPanel.getSize());
-            {
-                clearObject();
-                Object.setLayout(new GridLayout(2, 1));
-                Object.add(ImagePanel);
-                Object.add(TextPanel);
-            Object.revalidate();
-            Object.repaint();            
-            }
-    }
-    else {
-        clearObject();
-    }
+        Utilities.updateScrollPane(MainFrame.MainPanel, MainFrame.ScrollPane);
+        Utilities.updatePanel(MainFrame.Content);
     }
     // đưa ra xâu chỉ id bài viết chứa ký tự nhập vào
-    private ArrayList<News> searchSuggestion(String search) throws MalformedURLException, IOException, ParseException, org.json.simple.parser.ParseException {
+    public static ArrayList<News> searchSuggestion(String search) throws MalformedURLException, IOException, ParseException, org.json.simple.parser.ParseException {
         ArrayList<News> ans = new ArrayList<News>(); // lưu thông tin vài bài viết chứa ký tự cần tìm
         // search được filter lại tìm cho dễ
         search = search.toLowerCase().replace(" ", "").replace(",", "").replace(".", "").replace(":", "").replace("/", ""); 
@@ -242,35 +109,19 @@ public class MainFrame extends javax.swing.JFrame {
         }   
         return ans;
     }    
-    // update thanh lăn chuột
-    private void updateScrollPane() {
-        int preferredHeight = MainPanel.getPreferredSize().height;
-        int scrollPaneHeight = ScrollPane.getViewport().getViewSize().height;
-
-        // Kiểm tra nếu kích thước của MainPanel lớn hơn kích thước của JScrollPane
-        if (preferredHeight > scrollPaneHeight) {
-            // Nếu có, hiển thị thanh cuộn dọc
-            ScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        } else {
-            // Nếu không, ẩn thanh cuộn dọc
-            ScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
-        }
-    }
     // show ra các bài viết
-    private static void ContentPanel(ArrayList<News> listNew){
+    public static void ContentPanel(ArrayList<News> listNew){
         if (listNew != null && !listNew.isEmpty()){
             for (News news : listNew) {
             Article article = new Article();
             Content.add(article.ArticlePanel(news));
             }}
         else{
-                clearLayout();
+                Utilities.clearPanel(MainFrame.Content);
                 JLabel Nothing = new JLabel("           There are no articles to search for!");
                 Nothing.setFont(new Font("Segoe UI", Font.BOLD, 16)); // Font Arial, kích thước 20   
                 Content.add(Nothing);
-                // Thêm panel mới vào Content và cập nhật hiển thị
-                Content.revalidate();
-                Content.repaint();
+                Utilities.updatePanel(MainFrame.Content);
         }
     }
     // phần xử lý khi thao tác Enter hoặc là bấm Button Search
@@ -280,20 +131,18 @@ public class MainFrame extends javax.swing.JFrame {
         return; // Không làm gì nếu xâu nhập vào là rỗng hoặc null
     }
     // Xoá màn hình
-    clearLayout();
-    clearObject();   
+    Utilities.clearPanel(MainFrame.Content);
+    Utilities.clearPanel(MainFrame.Object); 
     try {
         search = search.trim(); // Loại bỏ khoảng trắng thừa
         ArrayList<News> ans = searchSuggestion(search);
         ContentPanel(ans);
-        EntityFind(search);
+        EntityFind.EntityFind(search);
     } catch (Exception e) {
         e.printStackTrace();
     }   
-    updateScrollPane();   
-    // Thêm panel mới vào Content và cập nhật hiển thị
-    Content.revalidate();
-    Content.repaint();
+    Utilities.updateScrollPane(MainFrame.MainPanel, MainFrame.ScrollPane);
+    Utilities.updatePanel(MainFrame.Content);
 }   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -451,14 +300,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     // trả về dữ liệu mặc định (trang mặc định)
     private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
-        // TODO add your handling code here:
-        clearLayout();
-        clearObject();
         startup();
-        updateScrollPane();
-        // Thêm panel mới vào Content và cập nhật hiển thị
-        Content.revalidate();
-        Content.repaint();
     }//GEN-LAST:event_HomeActionPerformed
 
     private void SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchActionPerformed
@@ -507,9 +349,9 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JPanel Content;
     private javax.swing.JButton Home;
-    private static javax.swing.JPanel MainPanel;
+    public static javax.swing.JPanel MainPanel;
     public static javax.swing.JPanel Object;
-    private javax.swing.JScrollPane ScrollPane;
+    public static javax.swing.JScrollPane ScrollPane;
     private javax.swing.JButton Search;
     private javax.swing.JTextField TextForSearch;
     public static javax.swing.JPanel Trending;

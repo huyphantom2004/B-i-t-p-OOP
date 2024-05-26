@@ -1,3 +1,4 @@
+D:\Code\Search_Blockchain\src\main\java\Crawler\Crawler.java
 D:\Code\Search_Blockchain\src\main\java\GUI\DisplayContent.java
 D:\Code\Search_Blockchain\src\main\java\FindingEntity\Entity.java
 D:\Code\Search_Blockchain\src\main\java\GUI\MainFrame.java
@@ -5,8 +6,10 @@ D:\Code\Search_Blockchain\src\main\java\Search\HashString.java
 D:\Code\Search_Blockchain\src\main\java\Crawler\NewJFrame.java
 D:\Code\Search_Blockchain\src\main\java\GUI\TopTrending.java
 D:\Code\Search_Blockchain\src\main\java\GUI\EntityFind.java
+D:\Code\Search_Blockchain\src\main\java\Crawler\BaiViet.java
 D:\Code\Search_Blockchain\src\main\java\Search\SetUpJson.java
 D:\Code\Search_Blockchain\src\main\java\GUI\Utilities.java
+D:\Code\Search_Blockchain\src\main\java\Crawler\GuiThuThap.java
 D:\Code\Search_Blockchain\src\main\java\Search\News.java
 D:\Code\Search_Blockchain\src\main\java\Trending\TrendExport.java
 D:\Code\Search_Blockchain\src\main\java\FindingEntity\EntityFinder.java

@@ -1,21 +1,11 @@
 package GUI;
 
-import FindingEntity.Entity;
-import FindingEntity.EntityFinder;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.Image;
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import FindingEntity.*;
+import java.awt.*;
+import javax.swing.*;
 
 public class EntityFind {
-    private void EntityFind(String text){
+    public static void EntityFind(String text){
     EntityFinder ent = new EntityFinder();
     Entity entity =  ent.FindEntity(text);
     if(entity!=null){        
@@ -56,16 +46,15 @@ public class EntityFind {
         TextPanel.add(descripOut); 
         descripOut.setPreferredSize(TextPanel.getSize());
             {
-                clearObject();
-                Object.setLayout(new GridLayout(2, 1));
-                Object.add(ImagePanel);
-                Object.add(TextPanel);
-            Object.revalidate();
-            Object.repaint();            
+            Utilities.clearPanel(MainFrame.Object);
+                MainFrame.Object.setLayout(new GridLayout(2, 1));
+                MainFrame.Object.add(ImagePanel);
+                MainFrame.Object.add(TextPanel);
+            Utilities.updatePanel(MainFrame.Object);        
             }
     }
     else {
-        clearObject();
-    }
+            Utilities.clearPanel(MainFrame.Object);
+        }
     }
 }
