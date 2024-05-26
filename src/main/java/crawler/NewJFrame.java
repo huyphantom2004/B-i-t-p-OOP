@@ -325,7 +325,7 @@ public class NewJFrame extends javax.swing.JFrame {
     } 
     private String getTitle(Document doc) {
         Element titleElement = doc.selectFirst("h1, h2");
-        return titleElement != null ? titleElement.text() : "Không có ";
+        return titleElement != null ? titleElement.text() : "None ";
     }
     private String getLastUpdatedDate(Document doc) {
         Element lastUpdatedDiv = doc.selectFirst("div.last-updated-on");
@@ -454,9 +454,9 @@ public class NewJFrame extends javax.swing.JFrame {
         }
     }
 
-    // Nếu không tìm thấy hashtag nào, trả về mảng với một phần tử "Không có"
+    // Nếu không tìm thấy hashtag nào, trả về mảng với một phần tử "None"
     if (hashtags.isEmpty()) {
-        return new String[] { "Không có" };
+        return new String[] { "None" };
     }
 
     // Chuyển danh sách thành mảng
@@ -474,7 +474,7 @@ public class NewJFrame extends javax.swing.JFrame {
         }
     }
     String summary = allSpanContent.toString().trim();
-    return summary.isEmpty() ? "Không có" : summary;
+    return summary.isEmpty() ? "None" : summary;
        }
     
     private static String getContent(Document doc) {
@@ -486,7 +486,7 @@ public class NewJFrame extends javax.swing.JFrame {
         if (div != null) {
             return extractContent(div.select("h2, p"));
         } else {
-            return "Không có";
+            return "None";
         }
     }
 } 

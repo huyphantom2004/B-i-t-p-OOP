@@ -106,7 +106,8 @@ public class DisplayContent {
         );
         
         frame.pack();
-        frame.setVisible(true);  
+        frame.setResizable(false);
+        frame.setVisible(true);
 
         title.setText("<html><body style='text-align: justify; font-family: Roboto; font-size: 18px;'>"+news.getTitle()+ "</body></html>");        
         Infor.setEditable(false);
@@ -115,7 +116,7 @@ public class DisplayContent {
                     "<p><b>Type:</b> " + news.getTypeBlog() + "</p>" +
                     "<p><b>Category:</b> " + news.getCategory() + "</p>" +
                     "<p><b>Created day:</b> " + news.getCreateDate() + "</p>" +
-                    "<p><b>Sumary:</b> " + news.getSummary().replaceAll("\n", "<br>") + "</p>" +
+                    "<p><b>Sumary:</b> " + news.getSummary().replaceAll("\n", "<br>").replaceAll("\u201C", "&ldquo;").replaceAll("\u201D", "&rdquo;").replaceAll("\u2019", "&#x2019;") + "</p>" +
                     "<p><b>Hashtag:</b>" + news.getHashTag().replaceAll("#", " #") + "</span></p>" +                    
                     "<p><b>Website:</b> " + news.getWebsite() + "</p>" +                           
                     "<p><b>Link:</b> <a href='" + news.getLink() + "'>Click here!</a></p></div>" +
@@ -134,7 +135,7 @@ public class DisplayContent {
             }
         });        
         content.setEditable(false);                
-        content.setText("<html><body style='text-align: justify; font-family: Roboto; font-size: 12px;'>"+ news.getContent().replaceAll("\n", "<br>") + "</body></html>");
+        content.setText("<html><body style='text-align: justify; font-family: Roboto; font-size: 12px;'>"+ news.getContent().replaceAll("\n", "<br>").replaceAll("\u201C", "&ldquo;").replaceAll("\u201D", "&rdquo;").replaceAll("\u2019", "&#x2019;") + "</body></html>");
         content.setCaretPosition(0);        
 }
 }

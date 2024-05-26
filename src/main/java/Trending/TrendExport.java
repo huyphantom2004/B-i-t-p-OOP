@@ -32,7 +32,12 @@ public class TrendExport {
             sortedHashtags.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
             int i = 0;
             for (Map.Entry<String, Integer> entry : sortedHashtags) {
-                if ((!entry.getKey().equals("")) && (!entry.getKey().equals("null")) && entry.getKey() != null && (!entry.getKey().equals("Không có"))) {
+                if ((!entry.getKey().equals("")) &&
+                    (!entry.getKey().equals("null")) &&
+                      entry.getKey() != null && 
+                    (!entry.getKey().equals("None")) && 
+                    (!entry.getKey().equals("#blockchain")) &&
+                    (!entry.getKey().equals("#Blockchain"))) {
                     trending[i] = entry.getKey();
                     i++;
                     if (i == 3) break;

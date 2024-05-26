@@ -174,7 +174,7 @@ public class MainFrame extends javax.swing.JFrame {
         nameOut.setFont(fontN);
         symbolOut.setFont(fontS);
         JLabel descripOut = new JLabel();
-        descripOut.setText("<html><div style='text-align:justify;'>" + entity.getDescription() + "</div></html>");
+        descripOut.setText("<html><div style='text-align:justify;'>" + entity.getDescription().replaceAll("\n", "<br>") + "</div></html>");
 
         JPanel ImagePanel = new JPanel();
         JPanel TextPanel = new JPanel();                
@@ -200,7 +200,6 @@ public class MainFrame extends javax.swing.JFrame {
         
         ImagePanel.add(imageOut);
         TextPanel.add(nameOut);
-//        if(!entity.getSymbol().equals("Không có Symbol") ) TextPanel.add(symbolOut);
         TextPanel.add(descripOut); 
         descripOut.setPreferredSize(TextPanel.getSize());
         
@@ -314,7 +313,7 @@ public class MainFrame extends javax.swing.JFrame {
         }
         else{
                 clearLayout();
-                JLabel Nothing = new JLabel("           Không có bài viết cần tìm!");
+                JLabel Nothing = new JLabel("           There are no articles to search for!");
                 Nothing.setFont(new Font("Segoe UI", Font.BOLD, 16)); // Font Arial, kích thước 20   
                 Content.add(Nothing);
                 // Thêm panel mới vào Content và cập nhật hiển thị
