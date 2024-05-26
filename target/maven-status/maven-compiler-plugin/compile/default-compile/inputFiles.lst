@@ -1,4 +1,5 @@
 D:\Code\Search_Blockchain\src\main\java\API\MainFrame.java
+D:\Code\Search_Blockchain\src\main\java\API\Utilities.java
 D:\Code\Search_Blockchain\src\main\java\FindingEntity\Entity.java
 D:\Code\Search_Blockchain\src\main\java\Search\HashString.java
 D:\Code\Search_Blockchain\src\main\java\Search\News.java
@@ -7,3 +8,4 @@ D:\Code\Search_Blockchain\src\main\java\Crawler\NewJFrame.java
 D:\Code\Search_Blockchain\src\main\java\API\DisplayContent.java
 D:\Code\Search_Blockchain\src\main\java\FindingEntity\EntityFinder.java
 D:\Code\Search_Blockchain\src\main\java\Search\SetUpJson.java
+D:\Code\Search_Blockchain\src\main\java\API\Article.java

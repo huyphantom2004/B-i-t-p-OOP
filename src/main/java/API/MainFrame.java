@@ -168,11 +168,8 @@ public class MainFrame extends javax.swing.JFrame {
         JLabel imageOut = new JLabel();
         
         JLabel nameOut = new JLabel("   "+entity.getFullName());
-        JLabel symbolOut = new JLabel("    "+entity.getSymbol());
-        Font fontN = new Font("Roboto", Font.BOLD, 18);
-        Font fontS = new Font("Roboto", Font.BOLD, 14);
-        nameOut.setFont(fontN);
-        symbolOut.setFont(fontS);
+        Font fontName = new Font("Roboto", Font.BOLD, 18);
+        nameOut.setFont(fontName);
         JLabel descripOut = new JLabel();
         descripOut.setText("<html><div style='text-align:justify;'>" + entity.getDescription().replaceAll("\n", "<br>") + "</div></html>");
 
@@ -197,12 +194,12 @@ public class MainFrame extends javax.swing.JFrame {
         icon = new ImageIcon(scaledImage);       
         imageOut.setIcon(icon);
         imageOut.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        
+        nameOut.setAlignmentX(Component.LEFT_ALIGNMENT);
+        descripOut.setAlignmentX(Component.LEFT_ALIGNMENT);
         ImagePanel.add(imageOut);
         TextPanel.add(nameOut);
         TextPanel.add(descripOut); 
         descripOut.setPreferredSize(TextPanel.getSize());
-        
             {
                 clearObject();
                 Object.setLayout(new GridLayout(2, 1));
