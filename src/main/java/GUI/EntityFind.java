@@ -5,7 +5,8 @@ import java.awt.*;
 import javax.swing.*;
 
 public class EntityFind {
-    public static void EntityFind(String text){
+    static private Utilities ultility = new Utilities();
+    public void EntityFind(String text){
     EntityFinder ent = new EntityFinder();
     Entity entity =  ent.FindEntity(text);
     if(entity!=null){        
@@ -23,6 +24,8 @@ public class EntityFind {
         imageOut.setHorizontalAlignment(JLabel.CENTER);
         imageOut.setVerticalAlignment(JLabel.CENTER);
         TextPanel.setLayout(new BoxLayout(TextPanel, BoxLayout.Y_AXIS));
+        TextPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        
         Dimension maxSize = new Dimension(290, 290);
         ImagePanel.setMaximumSize(maxSize);
         
@@ -39,22 +42,24 @@ public class EntityFind {
         icon = new ImageIcon(scaledImage);       
         imageOut.setIcon(icon);
         imageOut.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        
         nameOut.setAlignmentX(Component.LEFT_ALIGNMENT);
         descripOut.setAlignmentX(Component.LEFT_ALIGNMENT);
+        
         ImagePanel.add(imageOut);
         TextPanel.add(nameOut);
         TextPanel.add(descripOut); 
         descripOut.setPreferredSize(TextPanel.getSize());
             {
-            Utilities.clearPanel(MainFrame.Object);
+            ultility.clearPanel(MainFrame.Object);
                 MainFrame.Object.setLayout(new GridLayout(2, 1));
                 MainFrame.Object.add(ImagePanel);
                 MainFrame.Object.add(TextPanel);
-            Utilities.updatePanel(MainFrame.Object);        
+            ultility.updatePanel(MainFrame.Object);        
             }
     }
     else {
-            Utilities.clearPanel(MainFrame.Object);
+            ultility.clearPanel(MainFrame.Object);
         }
     }
 }

@@ -19,7 +19,10 @@ import org.json.simple.parser.ParseException;
 public class MainFrame extends javax.swing.JFrame {
     static private ArrayList<News> listNews =  new ArrayList<>(); /// lưu thông tin các bài viết
     static private ArrayList<HashString> lHash = new ArrayList<HashString>(); // Tìm kiếm ký tự cần tìm trong các bài viết
-    
+    static private Utilities ultility = new Utilities();
+    static private TopTrending trend = new TopTrending();
+    static private EntityFind entity = new EntityFind();
+
     public MainFrame() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255,255,255));         
@@ -30,7 +33,7 @@ public class MainFrame extends javax.swing.JFrame {
         Content.setLayout(new BoxLayout(Content, BoxLayout.Y_AXIS));
         Object.setLayout(new BoxLayout(Object, BoxLayout.Y_AXIS));
         Trending.setLayout(new GridLayout(4,1));
-        TopTrending.TopTrending();
+        trend.TopTrending();
         startup();
         // Thêm action cho Enter Key
         Search.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0), "clickButton");
@@ -74,11 +77,11 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }
     private static void startup(){
-        Utilities.clearPanel(MainFrame.Content);
-        Utilities.clearPanel(MainFrame.Object);        
+        ultility.clearPanel(MainFrame.Content);
+        ultility.clearPanel(MainFrame.Object);        
         ContentPanel(listNews);
-        Utilities.updateScrollPane(MainFrame.MainPanel, MainFrame.ScrollPane);
-        Utilities.updatePanel(MainFrame.Content);
+        ultility.updateScrollPane(MainFrame.MainPanel, MainFrame.ScrollPane);
+        ultility.updatePanel(MainFrame.Content);
     }
     // đưa ra xâu chỉ id bài viết chứa ký tự nhập vào
     public static ArrayList<News> searchSuggestion(String search) throws MalformedURLException, IOException, ParseException, org.json.simple.parser.ParseException {
@@ -117,11 +120,11 @@ public class MainFrame extends javax.swing.JFrame {
             Content.add(article.ArticlePanel(news));
             }}
         else{
-                Utilities.clearPanel(MainFrame.Content);
+                ultility.clearPanel(MainFrame.Content);
                 JLabel Nothing = new JLabel("           There are no articles to search for!");
                 Nothing.setFont(new Font("Segoe UI", Font.BOLD, 16)); // Font Arial, kích thước 20   
                 Content.add(Nothing);
-                Utilities.updatePanel(MainFrame.Content);
+                ultility.updatePanel(MainFrame.Content);
         }
     }
     // phần xử lý khi thao tác Enter hoặc là bấm Button Search
@@ -131,18 +134,18 @@ public class MainFrame extends javax.swing.JFrame {
         return; // Không làm gì nếu xâu nhập vào là rỗng hoặc null
     }
     // Xoá màn hình
-    Utilities.clearPanel(MainFrame.Content);
-    Utilities.clearPanel(MainFrame.Object); 
+    ultility.clearPanel(MainFrame.Content);
+    ultility.clearPanel(MainFrame.Object); 
     try {
         search = search.trim(); // Loại bỏ khoảng trắng thừa
         ArrayList<News> ans = searchSuggestion(search);
         ContentPanel(ans);
-        EntityFind.EntityFind(search);
+        entity.EntityFind(search);
     } catch (Exception e) {
         e.printStackTrace();
     }   
-    Utilities.updateScrollPane(MainFrame.MainPanel, MainFrame.ScrollPane);
-    Utilities.updatePanel(MainFrame.Content);
+    ultility.updateScrollPane(MainFrame.MainPanel, MainFrame.ScrollPane);
+    ultility.updatePanel(MainFrame.Content);
 }   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

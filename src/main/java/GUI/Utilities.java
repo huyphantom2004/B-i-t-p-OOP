@@ -4,7 +4,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 public class Utilities {
-    public static void updateScrollPane(JPanel containerPanel, JScrollPane scrollPane) {
+    public void updateScrollPane(JPanel containerPanel, JScrollPane scrollPane) {
         int preferredHeight = containerPanel.getPreferredSize().height;
         int scrollPaneHeight = scrollPane.getViewport().getViewSize().height;
 
@@ -17,12 +17,12 @@ public class Utilities {
             scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
         }
     }
-    public static void clearPanel(JPanel panel) {
+    public void clearPanel(JPanel panel) {
         panel.removeAll();
         panel.revalidate();
         panel.repaint();
     }
-    public static void updatePanel(JPanel panel) {
+    public void updatePanel(JPanel panel) {
         panel.revalidate();
         panel.repaint();
     }

@@ -306,6 +306,11 @@ public class Crawler extends BaiViet{
         return summary.isEmpty() ? "None" : summary;
     }
     public static String getContent(Document doc) {
+        Element mainContent = doc.selectFirst("main.post__content.category");
+        if (mainContent != null) {
+            return extractContent(mainContent.select("p, h2"));
+        }
+        
         Element article = doc.select("article").first();
         if (article != null) {
             return extractContent(article.select("h2, p"));

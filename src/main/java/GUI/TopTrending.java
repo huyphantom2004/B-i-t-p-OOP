@@ -13,7 +13,8 @@ import javax.swing.JLabel;
 import org.json.simple.parser.ParseException;
 
 public class TopTrending {
-    public static void TopTrending() {
+    static private Utilities ultility = new Utilities();
+    public void TopTrending() {
         TrendExport trendExport = new TrendExport();
         String[] top3Hashtag = trendExport.mostFrequentTag();
 
@@ -42,8 +43,8 @@ public class TopTrending {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     if (!tag.equals("null")) {
-                        Utilities.clearPanel(MainFrame.Content);
-                        Utilities.clearPanel(MainFrame.Object);
+                        ultility.clearPanel(MainFrame.Content);
+                        ultility.clearPanel(MainFrame.Object);
 
                         ArrayList<News> ans;
                         try {
@@ -54,8 +55,8 @@ public class TopTrending {
                         } catch (ParseException ex) {
                             Logger.getLogger(TopTrending.class.getName()).log(Level.SEVERE, null, ex);
                         }
-                        Utilities.updateScrollPane(MainFrame.MainPanel, MainFrame.ScrollPane);
-                        Utilities.updatePanel(MainFrame.Content);
+                        ultility.updateScrollPane(MainFrame.MainPanel, MainFrame.ScrollPane);
+                        ultility.updatePanel(MainFrame.Content);
                     }
                 }
 
